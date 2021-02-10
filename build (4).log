@@ -1,0 +1,99 @@
+2021/02/10 20:56:42 Downloading source code...
+2021/02/10 20:56:43 Finished downloading source code
+2021/02/10 20:56:44 Creating Docker network: acb_default_network, driver: 'bridge'
+2021/02/10 20:56:44 Successfully set up Docker network: acb_default_network
+2021/02/10 20:56:44 Setting up Docker configuration...
+2021/02/10 20:56:45 Successfully set up Docker configuration
+2021/02/10 20:56:45 Logging in to registry: fb8216dbd84b40639c92c3fca50f448d.azurecr.io
+2021/02/10 20:56:46 Successfully logged into fb8216dbd84b40639c92c3fca50f448d.azurecr.io
+2021/02/10 20:56:46 Executing step ID: acb_step_0. Timeout(sec): 5400, Working directory: '', Network: 'acb_default_network'
+2021/02/10 20:56:46 Scanning for dependencies...
+2021/02/10 20:56:46 Successfully scanned dependencies
+2021/02/10 20:56:46 Launching container with name: acb_step_0
+Sending build context to Docker daemon  65.02kB
+Step 1/15 : FROM mcr.microsoft.com/azureml/intelmpi2018.3-ubuntu16.04:20210104.v1@sha256:81ca5cdfeefc2a25afff41e66151e97b8a36c0a43d0cd0056af26f01dd37885e
+sha256:81ca5cdfeefc2a25afff41e66151e97b8a36c0a43d0cd0056af26f01dd37885e: Pulling from azureml/intelmpi2018.3-ubuntu16.04
+Digest: sha256:81ca5cdfeefc2a25afff41e66151e97b8a36c0a43d0cd0056af26f01dd37885e
+Status: Downloaded newer image for mcr.microsoft.com/azureml/intelmpi2018.3-ubuntu16.04:20210104.v1@sha256:81ca5cdfeefc2a25afff41e66151e97b8a36c0a43d0cd0056af26f01dd37885e
+ ---> 138ae4912094
+Step 2/15 : USER root
+ ---> Running in 122b9e838f60
+Removing intermediate container 122b9e838f60
+ ---> 00464075d586
+Step 3/15 : RUN mkdir -p $HOME/.cache
+ ---> Running in 029af9911829
+Removing intermediate container 029af9911829
+ ---> 6743127b2ca3
+Step 4/15 : WORKDIR /
+ ---> Running in 0165a676e6ac
+Removing intermediate container 0165a676e6ac
+ ---> 4455514232ad
+Step 5/15 : COPY azureml-environment-setup/99brokenproxy /etc/apt/apt.conf.d/
+ ---> e3e196243bd4
+Step 6/15 : RUN if dpkg --compare-versions `conda --version | grep -oE '[^ ]+$'` lt 4.4.11; then conda install conda==4.4.11; fi
+ ---> Running in 33536f1fe866
+Removing intermediate container 33536f1fe866
+ ---> 74ba8bec715b
+Step 7/15 : COPY azureml-environment-setup/mutated_conda_dependencies.yml azureml-environment-setup/mutated_conda_dependencies.yml
+ ---> 0b2e245628b7
+Step 8/15 : RUN ldconfig /usr/local/cuda/lib64/stubs && conda env create -p /azureml-envs/azureml_5ae6cb7f53fad27968cea50a7874d714 -f azureml-environment-setup/mutated_conda_dependencies.yml && rm -rf "$HOME/.cache/pip" && conda clean -aqy && CONDA_ROOT_DIR=$(conda info --root) && rm -rf "$CONDA_ROOT_DIR/pkgs" && find "$CONDA_ROOT_DIR" -type d -name __pycache__ -exec rm -rf {} + && ldconfig
+ ---> Running in 627b9e3333e0
+Warning: you have pip-installed dependencies in your environment file, but you do not list pip itself as one of your conda dependencies.  Conda may not use the correct pip to install your packages, and they may end up in the wrong place.  Please add an explicit pip dependency.  I'm adding one for you, but still nagging you.
+Collecting package metadata (repodata.json): ...working... 
+done
+Solving environment: ...working... done
+
+Downloading and Extracting Packages
+xz-5.2.5             | 438 KB    |            |   0% xz-5.2.5             | 438 KB    | #          |  11% xz-5.2.5             | 438 KB    | ########## | 100% 
+ncurses-6.0          | 907 KB    |            |   0% ncurses-6.0          | 907 KB    | ########## | 100% 
+libgcc-ng-9.1.0      | 8.1 MB    |            |   0% libgcc-ng-9.1.0      | 8.1 MB    | #####3     |  53% libgcc-ng-9.1.0      | 8.1 MB    | ########## | 100% 
+zlib-1.2.11          | 120 KB    |            |   0% zlib-1.2.11          | 120 KB    | ########## | 100% 
+readline-7.0         | 387 KB    |            |   0% readline-7.0         | 387 KB    | ########## | 100% 
+certifi-2020.6.20    | 160 KB    |            |   0% certifi-2020.6.20    | 160 KB    | ########## | 100% 
+pip-20.2.4           | 2.0 MB    |            |   0% pip-20.2.4           | 2.0 MB    | ########## | 100% 
+tk-8.6.10            | 3.2 MB    |            |   0% tk-8.6.10            | 3.2 MB    | ########## | 100% 
+wheel-0.35.1         | 36 KB     |            |   0% wheel-0.35.1         | 36 KB     | ########## | 100% 
+libstdcxx-ng-9.1.0   | 4.0 MB    |            |   0% libstdcxx-ng-9.1.0   | 4.0 MB    | ########## | 100% 
+libedit-3.1          | 171 KB    |            |   0% libedit-3.1          | 171 KB    | ########## | 100% 
+sqlite-3.23.1        | 1.5 MB    |            |   0% sqlite-3.23.1        | 1.5 MB    | ########## | 100% 
+ca-certificates-2020 | 128 KB    |            |   0% ca-certificates-2020 | 128 KB    | ########## | 100% 
+setuptools-50.3.0    | 891 KB    |            |   0% setuptools-50.3.0    | 891 KB    | ########## | 100% 
+libffi-3.2.1         | 52 KB     |            |   0% libffi-3.2.1         | 52 KB     | ########## | 100% 
+python-3.6.2         | 27.0 MB   |            |   0% python-3.6.2         | 27.0 MB   | ##         |  20% python-3.6.2         | 27.0 MB   | ####8      |  48% python-3.6.2         | 27.0 MB   | ########   |  81% python-3.6.2         | 27.0 MB   | ########## | 100% 
+openssl-1.0.2u       | 3.1 MB    |            |   0% openssl-1.0.2u       | 3.1 MB    | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+[91m
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.7.12
+  latest version: 4.9.2
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+Pip subprocess error:
+ERROR: Could not find a version that satisfies the requirement azrueml-defaults (from -r /azureml-environment-setup/condaenv.wp4vyw2p.requirements.txt (line 4)) (from versions: none)
+ERROR: No matching distribution found for azrueml-defaults (from -r /azureml-environment-setup/condaenv.wp4vyw2p.requirements.txt (line 4))
+
+
+CondaEnvException: Pip failed
+
+[0mRan pip subprocess with arguments:
+['/azureml-envs/azureml_5ae6cb7f53fad27968cea50a7874d714/bin/python', '-m', 'pip', 'install', '-U', '-r', '/azureml-environment-setup/condaenv.wp4vyw2p.requirements.txt']
+Pip subprocess output:
+Collecting numpy
+  Downloading numpy-1.19.5-cp36-cp36m-manylinux2010_x86_64.whl (14.8 MB)
+Collecting onnxruntime
+  Downloading onnxruntime-1.6.0-cp36-cp36m-manylinux2014_x86_64.whl (4.1 MB)
+Collecting azureml-core~=1.20.0
+  Downloading azureml_core-1.20.0.post1-py3-none-any.whl (2.1 MB)
+
+The command '/bin/sh -c ldconfig /usr/local/cuda/lib64/stubs && conda env create -p /azureml-envs/azureml_5ae6cb7f53fad27968cea50a7874d714 -f azureml-environment-setup/mutated_conda_dependencies.yml && rm -rf "$HOME/.cache/pip" && conda clean -aqy && CONDA_ROOT_DIR=$(conda info --root) && rm -rf "$CONDA_ROOT_DIR/pkgs" && find "$CONDA_ROOT_DIR" -type d -name __pycache__ -exec rm -rf {} + && ldconfig' returned a non-zero code: 1
+2021/02/10 20:57:51 Container failed during run: acb_step_0. No retries remaining.
+failed to run step ID: acb_step_0: exit status 1
+
+Run ID: cd5 failed after 1m10s. Error: failed during run, err: exit status 1

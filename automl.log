@@ -1,0 +1,403 @@
+2021-02-10 18:54:16.436 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 18:54:16.442 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 18:54:16.462 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 18:54:16.530 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 18:54:16.817 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 18:54:16.817 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Failure, Duration=286.82[ms]
+2021-02-10 18:54:16.817 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 18:54:16.818 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Failure, Duration=356.25[ms]
+2021-02-10 18:54:16.819 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 620, in _get_best_child_run
+    curr_run = self._get_run_internal(iteration, metric, "get_output")
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 18:54:16.819 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=377.61[ms]
+2021-02-10 18:54:16.820 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 690, in get_output
+    activity_name=automl_shared_constants.TelemetryConstants.GET_OUTPUT
+  File "run.py", line 620, in _get_best_child_run
+    curr_run = self._get_run_internal(iteration, metric, "get_output")
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 18:54:16.821 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=384.46[ms]
+2021-02-10 19:07:00.688 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 19:07:00.719 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 19:07:00.739 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 19:07:00.791 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 19:07:00.974 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 19:07:00.975 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Failure, Duration=183.09[ms]
+2021-02-10 19:07:00.975 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 19:07:00.975 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Failure, Duration=236.14[ms]
+2021-02-10 19:07:00.976 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 620, in _get_best_child_run
+    curr_run = self._get_run_internal(iteration, metric, "get_output")
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 19:07:00.976 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=257.18[ms]
+2021-02-10 19:07:00.976 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 690, in get_output
+    activity_name=automl_shared_constants.TelemetryConstants.GET_OUTPUT
+  File "run.py", line 620, in _get_best_child_run
+    curr_run = self._get_run_internal(iteration, metric, "get_output")
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 19:07:00.976 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=287.94[ms]
+2021-02-10 19:07:03.633 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 19:07:03.643 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 19:07:03.647 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 19:07:03.704 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 19:07:03.919 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 19:07:03.920 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Failure, Duration=215.78[ms]
+2021-02-10 19:07:03.920 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 19:07:03.920 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Failure, Duration=273.24[ms]
+2021-02-10 19:07:03.921 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 620, in _get_best_child_run
+    curr_run = self._get_run_internal(iteration, metric, "get_output")
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 19:07:03.921 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=278.04[ms]
+2021-02-10 19:07:03.921 - CRITICAL - 5506 - azureml.train.automl.run.log_traceback:224 - Type: ModelMissing
+Class: AutoMLException
+Message: AutoMLException:
+	Message: Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.
+	InnerException: None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Could not find a model with valid score for metric 'accuracy'. Please ensure that at least one run was successfully completed with a valid score for the given metric.",
+        "target": "metric",
+        "inner_error": {
+            "code": "NotFound",
+            "inner_error": {
+                "code": "ModelMissing"
+            }
+        }
+    }
+}
+Traceback:
+  File "telemetry_activity_logger.py", line 57, in _log_activity
+    yield
+  File "run.py", line 690, in get_output
+    activity_name=automl_shared_constants.TelemetryConstants.GET_OUTPUT
+  File "run.py", line 620, in _get_best_child_run
+    curr_run = self._get_run_internal(iteration, metric, "get_output")
+  File "run.py", line 778, in _get_run_internal
+    child_runs_and_scores = self._get_all_automl_child_runs(metric)
+  File "run.py", line 819, in _get_all_automl_child_runs
+    raise AutoMLException._with_error(AzureMLError.create(ModelMissing, target="metric", metric=metric))
+
+ExceptionTarget: metric
+2021-02-10 19:07:03.921 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=288.39[ms]
+2021-02-10 19:40:13.002 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 19:40:13.053 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 19:40:13.067 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 19:40:13.180 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=112.58[ms]
+2021-02-10 19:40:13.180 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=126.82[ms]
+2021-02-10 19:40:13.180 - INFO - 5506 - azureml.train.automl._model_download_utilities._log_activity:54 - ActivityStarted: DownloadModel
+2021-02-10 19:40:22.070 - INFO - 5506 - azureml.automl.runtime.distributed.utilities.horovod_initialized:58 - Horovod not found in current environment. Distribution via Horovod will be disabled.
+2021-02-10 19:40:24.402 - INFO - 5506 - azureml.automl.runtime.featurization.data_transformer.__init__:184 - Feature sweeping enabled: False
+2021-02-10 19:40:24.402 - INFO - 5506 - azureml.automl.runtime.featurization.data_transformer.__init__:185 - Feature sweeping timeout: 86400
+2021-02-10 19:40:25.536 - INFO - 5506 - azureml.train.automl._model_download_utilities._log_activity:92 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=12355.17[ms]
+2021-02-10 19:40:25.536 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=12533.97[ms]
+2021-02-10 20:05:49.862 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 20:05:49.960 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 20:05:49.982 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 20:07:53.112 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=123129.47[ms]
+2021-02-10 20:07:53.216 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=123256.19[ms]
+2021-02-10 20:07:53.595 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=123732.78[ms]
+2021-02-10 20:08:21.645 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 20:08:21.659 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetOutput
+2021-02-10 20:08:21.672 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 20:08:21.779 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=107.24[ms]
+2021-02-10 20:08:21.779 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=120.3[ms]
+2021-02-10 20:08:21.780 - INFO - 5506 - azureml.train.automl._model_download_utilities._log_activity:54 - ActivityStarted: DownloadModel
+2021-02-10 20:08:22.245 - INFO - 5506 - azureml.automl.runtime.featurization.data_transformer.__init__:184 - Feature sweeping enabled: False
+2021-02-10 20:08:22.245 - INFO - 5506 - azureml.automl.runtime.featurization.data_transformer.__init__:185 - Feature sweeping timeout: 86400
+2021-02-10 20:08:22.309 - INFO - 5506 - azureml.train.automl._model_download_utilities._log_activity:92 - ActivityCompleted: Activity=DownloadModel, HowEnded=Success, Duration=528.81[ms]
+2021-02-10 20:08:22.310 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=664.53[ms]
+2021-02-10 20:12:47.345 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: RegisterModel
+2021-02-10 20:12:47.358 - INFO - 5506 - azureml.train.automl.run._log_activity:54 - ActivityStarted: GetChildren
+2021-02-10 20:12:47.483 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=125.1[ms]
+2021-02-10 20:12:48.259 - INFO - 5506 - azureml.train.automl.run._log_activity:92 - ActivityCompleted: Activity=RegisterModel, HowEnded=Success, Duration=913.9[ms]
