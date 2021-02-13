@@ -27,7 +27,7 @@ def clean_data(data):
 # TODO: Create TabularDataset using TabularDatasetFactory
 # Data is located at:
 # "https://github.com/Daniel-car1/nd00333-capstone/blob/main/heart.csv"
-ds = TabularDatasetFactory.from_delimited_files(path='https://github.com/Daniel-car1/nd00333-capstone/blob/main/heart.csv', header=True)
+ds = TabularDatasetFactory.from_delimited_files(path='https://raw.githubusercontent.com/Daniel-car1/nd00333-capstone/main/heart.csv', header=True)
 
 x,y = clean_data(ds)
 
