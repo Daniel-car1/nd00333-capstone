@@ -14,29 +14,33 @@ from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
+from azureml.core import Dataset
+
+
 
 def clean_data(data): 
     # Clean data
     
-    df = data.to_pandas_dataframe().dropna()
-    y_df = df.traget
-    x_df = df.drop('target', axis=1)
-    
+    x_df = data.to_pandas_dataframe() #.dropna()
+    y_df = x_df.pop('target')
+     
     return x_df, y_df
 
 # TODO: Create TabularDataset using TabularDatasetFactory
 # Data is located at:
 # "https://github.com/Daniel-car1/nd00333-capstone/blob/main/heart.csv"
-ds = TabularDatasetFactory.from_delimited_files(path='https://raw.githubusercontent.com/Daniel-car1/nd00333-capstone/main/heart.csv', header=True)
+
+ds = Dataset.Tabular.from_delimited_files("https://raw.githubusercontent.com/Daniel-car1/nd00333-capstone/main/heart.csv")
+#TabularDatasetFactory.from_delimited_files(path='https://raw.githubusercontent.com/Daniel-car1/nd00333-capstone/main/heart.csv') #, header=True)
 
 x,y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
 ### YOUR CODE HERE ###
-x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2) 
+x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.2, shuffle=True) 
+
 
 run = Run.get_context()
-
     
 def main():
     # Add arguments to script
