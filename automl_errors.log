@@ -1,3 +1,1 @@
-2021-02-10 18:43:59.784 - INFO - 5506 - azureml.train.automl.automlconfig._start_execution:208 - Submitting remote.
-2021-02-10 18:56:30.660 - INFO - 5506 - azureml.train.automl.automlconfig._start_execution:208 - Submitting remote.
-2021-02-10 19:10:31.767 - INFO - 5506 - azureml.train.automl.automlconfig._start_execution:208 - Submitting remote.
+2021-02-18 17:09:58.535 - INFO - 11382 - azureml.train.automl.automlconfig._start_execution:208 - Submitting remote.
