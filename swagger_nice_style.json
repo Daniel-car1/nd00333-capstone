@@ -1,0 +1,193 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "aciservice",
+		"description": "API specification for the Azure Machine Learning service aciservice",
+		"version": "1.0"
+	},
+	"schemes": [
+		"https"
+	],
+	"consumes": [
+		"application/json"
+	],
+	"produces": [
+		"application/json"
+	],
+	"securityDefinitions": {
+		"Bearer": {
+			"type": "apiKey",
+			"name": "Authorization",
+			"in": "header",
+			"description": "For example: Bearer abc123"
+		}
+	},
+	"paths": {
+		"/": {
+			"get": {
+				"operationId": "ServiceHealthCheck",
+				"description": "Simple health check endpoint to ensure the service is up at any given point.",
+				"responses": {
+					"200": {
+						"description": "If service is up and running, this response will be returned with the content 'Healthy'",
+						"schema": {
+							"type": "string"
+						},
+						"examples": {
+							"application/json": "Healthy"
+						}
+					},
+					"default": {
+						"description": "The service failed to execute due to an error.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/score": {
+			"post": {
+				"operationId": "RunMLService",
+				"description": "Run web service's model and get the prediction output",
+				"security": [
+					{
+						"Bearer": []
+					}
+				],
+				"parameters": [
+					{
+						"name": "serviceInputPayload",
+						"in": "body",
+						"description": "The input payload for executing the real-time machine learning service.",
+						"schema": {
+							"$ref": "#/definitions/ServiceInput"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "The service processed the input correctly and provided a result prediction, if applicable.",
+						"schema": {
+							"$ref": "#/definitions/ServiceOutput"
+						}
+					},
+					"default": {
+						"description": "The service failed to execute due to an error.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"ServiceInput": {
+			"type": "object",
+			"properties": {
+				"data": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"age": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"sex": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"cp": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"trestbps": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"chol": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"fbs": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"restecg": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"thalach": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"exang": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"oldpeak": {
+								"type": "number",
+								"format": "double"
+							},
+							"slope": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"ca": {
+								"type": "integer",
+								"format": "int64"
+							},
+							"thal": {
+								"type": "integer",
+								"format": "int64"
+							}
+						}
+					}
+				}
+			},
+			"example": {
+				"data": [
+					{
+						"age": 0,
+						"sex": 0,
+						"cp": 0,
+						"trestbps": 0,
+						"chol": 0,
+						"fbs": 0,
+						"restecg": 0,
+						"thalach": 0,
+						"exang": 0,
+						"oldpeak": 0.0,
+						"slope": 0,
+						"ca": 0,
+						"thal": 0
+					}
+				]
+			}
+		},
+		"ServiceOutput": {
+			"type": "array",
+			"items": {
+				"type": "integer",
+				"format": "int64"
+			},
+			"example": [
+				0
+			]
+		},
+		"ErrorResponse": {
+			"type": "object",
+			"properties": {
+				"status_code": {
+					"type": "integer",
+					"format": "int32"
+				},
+				"message": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
