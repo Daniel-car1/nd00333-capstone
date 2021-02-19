@@ -8,7 +8,24 @@
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
 ## Dataset
-https://www.kaggle.com/ronitf/heart-disease-uci?select=heart.csv
+https://www.kaggle.com/ronitf/heart-disease-uci?select=heart.csv <br/>
+[Heart Disease](https://www.kaggle.com/ronitf/heart-disease-uci?select=heart.csv) <br/>
+An excerpt from the chosen dataset shows the contained attributes, the following form the input vectors of the machine learning model, except `target`:
+* `age` in years
+* `sex` (1 = male; 0 = female)
+* `cp` chest pain type
+* `trestbps` resting blood pressure 
+* `chol` serum cholestoral in mg/dl
+* `fbs` fasting blood sugar
+* `restecg` resting electrocadiographic results
+* `thalach` maximum heart rate achieved
+* `exang` exercise induced angina (1 = yes; 0 = no)
+* `oldpeak`ST depression induced by exercise relative to rest
+* `slope` of the peak exercise ST segment
+* `ca` number of major vessels (0-3) colored by flourosopy
+* `thal` (0 = normal; 1 = fixed defect; 2 = reversable defect)
+
+* `target` indicates the heard disease status (0 = heart disease; 1 = asymptomatic) and is the label of the dataset which has to be predicted and send as a response from the deployed model.
 
 ### Overview
 *TODO*: Explain about the data you are using and where you got it from.
