@@ -2,7 +2,9 @@
 
 # Your Project Title Here
 
-*TODO:* Write a short introduction to your project.
+*TODO:* Write a short introduction to your project. 
+
+ML Ops, Classification, Data prparation, AutoML, Hyperparamter tuning Hyperdrive, investigate machine larning models, automation, Jupyther Notebook, deploy model as webservice, prediction, consume endpoint's REST API, investigate endpoints
 
 ## Project Set Up and Installation
 *OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
