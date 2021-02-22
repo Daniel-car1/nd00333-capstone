@@ -5,9 +5,12 @@
 ML Ops, Classification, Data prparation, AutoML, Hyperparamter tuning Hyperdrive, investigate machine larning models, automation, Jupyther Notebook, deploy model as webservice, prediction, consume endpoint's REST API, investigate endpoints
 
 ## Dataset
-https://www.kaggle.com/ronitf/heart-disease-uci?select=heart.csv <br/>
-[Heart Disease](https://www.kaggle.com/ronitf/heart-disease-uci?select=heart.csv) <br/>
-An excerpt from the chosen dataset shows the contained attributes, the following form the input vectors of the machine learning model, except `target`:
+Despite the scientific advancement over the past decades, there are still numerous research areas in the field of heart disease. It is of particular interest to record easy-to-follow parameters and use them to infer a person's heart disease status.
+
+### Overview of the data set
+Envestigating the status of the heart disease with machine learning methods requires a large number of labeled trainings and test data. It is therefore advisable to use data from the [kaggle](https://www.kaggle.com/) data platform. In addition to the large number of data records, information is also provided about the distribution of the attributes in a data record, which gives you a first impression of the data. <br/>
+[Heart Disease](https://www.kaggle.com/ronitf/heart-disease-uci?select=heart.csv), a tabular dataset consits of 304 rows, 12 attributes and a labeled target.
+An excerpt from the chosen dataset shows the contained attributes, the following form the input vectors of the machine learning model and the labled output`target`:
 * `age` in years
 * `sex` (1 = male; 0 = female)
 * `cp` chest pain type
@@ -24,14 +27,11 @@ An excerpt from the chosen dataset shows the contained attributes, the following
 
 * `target` indicates the heard disease status (0 = heart disease; 1 = asymptomatic) and is the label of the dataset which has to be predicted and send as a response from the deployed model.
 
-### Overview
-*TODO*: Explain about the data you are using and where you got it from.
+### Task of the machine learning model
+The aim of this work is to train a machine learning classification algorithm using the data received from the above mentioned database. Therefore the 12 featured are used as input vectors during training and the machine learning algorithm is learning a mapping from the input vector to the output `target`. After finishing training input data of the same shema as the input vectors are fed into the trained network and the network is going to predict the output related to the input data which should give a pearson the opportunity to get information about the heart disease status.
 
-### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
-
-### Access
-*TODO*: Explain how you are accessing the data in your workspace.
+### Access to the data
+Kaggle provided the Heart Disease dataset as a csv file, which is saved on github and uploaded as Raw data form the local file and registered to the Azure Workspace as a tabular dataset. <br/> It is also possible to work with data sets in machine learning algorithems.
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
