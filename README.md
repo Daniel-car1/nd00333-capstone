@@ -1,8 +1,6 @@
 # Azure Machine Learning Engineer - Capstone Project to predict the Heart Disease Status
 
-*TODO:* Write a short introduction to your project. 
-
-ML Ops, Classification, Data prparation, AutoML, Hyperparamter tuning Hyperdrive, investigate machine larning models, automation, Jupyther Notebook, deploy model as webservice, prediction, consume endpoint's REST API, investigate endpoints
+Azure the cloud solution from microsoft offers the well-known advantages of the vertical scaling of computing power, the provision of web services and the use of existing cloud solutions to create the best products. <br/> That project uses these advantages for training the machine learning model with AutoML or hyperparameter tuning using Hyperdrive from a generated database to perform classification. Compute instances are created and made available in the cloud. The best trained model is deployed as a webservice whose endpoint API can be consumed via REST method to obtain the model's prediction. 
 
 ## Dataset
 Despite the scientific advancement over the past decades, there are still numerous research areas in the field of heart disease. It is of particular interest to record easy-to-follow parameters and use them to infer a person's heart disease status.
@@ -31,7 +29,7 @@ An excerpt from the chosen dataset shows the contained attributes, the following
 The aim of this work is to train a machine learning classification algorithm using the data received from the above mentioned database. Therefore the 12 featured are used as input vectors during training and the machine learning algorithm is learning a mapping from the input vector to the output `target`. After finishing training input data of the same shema as the input vectors are fed into the trained network and the network is going to predict the output related to the input data which should give a pearson the opportunity to get information about the heart disease status.
 
 ### Access to the data
-Kaggle provided the Heart Disease dataset as a csv file, which is saved on github and uploaded as Raw data form the local file and registered to the Azure Workspace as a tabular dataset. <br/> It is also possible to work with data sets in machine learning algorithems.
+Kaggle provided the Heart Disease dataset as a csv file, which is saved on github and uploaded as Raw data form the local file and registered to the Azure Workspace as a tabular dataset. It is also possible to work with data sets in machine learning algorithems.
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
