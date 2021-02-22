@@ -1,13 +1,8 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
-# Your Project Title Here
+# Azure Machine Learning Engineer - Capstone Project to predict the Heart Disease Status
 
 *TODO:* Write a short introduction to your project. 
 
 ML Ops, Classification, Data prparation, AutoML, Hyperparamter tuning Hyperdrive, investigate machine larning models, automation, Jupyther Notebook, deploy model as webservice, prediction, consume endpoint's REST API, investigate endpoints
-
-## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
 
 ## Dataset
 https://www.kaggle.com/ronitf/heart-disease-uci?select=heart.csv <br/>
@@ -57,7 +52,7 @@ An excerpt from the chosen dataset shows the contained attributes, the following
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input. <br/>
-As it turned out, the VotingEnsemble resulted as the best AutoML model, which has to be deployed as a model endpoint. <br/> 
+As it turned out, the VotingEnsemble resulted as the best AutoML model with an weighted Accuracy of XXXX, even better than the classification model after applying hpyterparameter tuning using Hyperdrive with an Accuracy of ......, which has to be deployed as a webservice. <br/> 
 It's notrivial architecture is represented, using [NETRON](https://github.com/lutzroeder/netron) an open source tool for investigating and documenting Machine Learning Models in a pictorial way. <br/>
 Following the data flow, the 13 input features are scaled and casted in different ways resulting in an `FeatureVectorizer` which in turn results in the superposition of the 5  `TreeEnsembleClassifiers` and the `LinearClassifier` which each one is voted by a `Scaler`. Each `label_out` gets the associated `probabilities_out` of the VotingEnsemble as model output. Due to the Classification task of the deployed model, the output `label_out` is used as response.
 ![hyperdrive](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Images/best_AutoMLmodel.png) <br/>
