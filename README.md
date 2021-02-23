@@ -43,8 +43,6 @@ Kaggle provided the Heart Disease dataset as a csv file, which is saved on githu
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
-
 The first branch of the workflow project leads to receiving a trained model using AutoML. Settings and configurations used for this experiment are a `BanditPolicy` as an early termination policy, `RandomParameterSampling` of the tuneable hyperparameters of the classifier and the `HyperDriveConfig`.
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/sampling_policy_2hp.PNG) <br/>
 
