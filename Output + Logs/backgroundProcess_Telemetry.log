@@ -1,0 +1,20 @@
+2021-02-23 15:26:39.9610|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: ActivityMigration|metrics: {}, properties: {"prevState":"No version","newState":"1","success":"True"}|
+2021-02-23 15:26:40.9560|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.GetFilesBlock","id":"0"}|
+2021-02-23 15:26:40.9560|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.ParseDelimitedBlock","id":"1"}|
+2021-02-23 15:26:40.9560|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.DropColumnsBlock","id":"2"}|
+2021-02-23 15:26:40.9560|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.SetColumnTypesBlock","id":"3"}|
+2021-02-23 15:26:40.9560|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.TakeBlock","id":"4"}|
+2021-02-23 15:26:40.9560|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.SetRsLexContextBlock","id":"5"}|
+2021-02-23 15:33:21.1402|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.GetFilesBlock","id":"0"}|
+2021-02-23 15:33:21.1402|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.ParseDelimitedBlock","id":"1"}|
+2021-02-23 15:33:21.1402|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.DropColumnsBlock","id":"2"}|
+2021-02-23 15:33:21.1402|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.SetColumnTypesBlock","id":"3"}|
+2021-02-23 15:33:21.1402|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.TakeBlock","id":"4"}|
+2021-02-23 15:33:21.1402|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.WriteFeatherToSocketBlock","id":"5"}|
+2021-02-23 15:33:22.8226|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: WritePartitionToSocket|metrics: {"size":34880.0}, properties: {}|
+2021-02-23 15:33:25.1086|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.GetFilesBlock","id":"0"}|
+2021-02-23 15:33:25.1086|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.ParseDelimitedBlock","id":"1"}|
+2021-02-23 15:33:25.1086|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.DropColumnsBlock","id":"2"}|
+2021-02-23 15:33:25.1086|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.SetColumnTypesBlock","id":"3"}|
+2021-02-23 15:33:25.1086|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.DropColumnsBlock","id":"4"}|
+2021-02-23 15:33:25.1086|DEBUG|Telemetry|27f7c01b-3401-47c7-b3eb-7ba57997997c|event: StepInfo|metrics: {}, properties: {"blockType":"Microsoft.DPrep.SetRsLexContextBlock","id":"5"}|

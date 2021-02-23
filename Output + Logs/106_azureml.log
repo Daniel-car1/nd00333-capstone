@@ -1,0 +1,183 @@
+2021-02-23 15:26:27,760|azureml|DEBUG|Inputs:: kwargs: {'OutputCollection': True, 'EnableMLflowTracking': True, 'only_in_process_features': True, 'skip_track_logs_dir': True}, track_folders: None, deny_list: None, directories_to_watch: []
+2021-02-23 15:26:27,761|azureml.history._tracking.PythonWorkingDirectory|DEBUG|Execution target type: batchai
+2021-02-23 15:26:27,767|azureml.history._tracking.PythonWorkingDirectory|DEBUG|Failed to import pyspark with error: No module named 'pyspark'
+2021-02-23 15:26:27,767|azureml.history._tracking.PythonWorkingDirectory.workingdir|DEBUG|Pinning working directory for filesystems: ['pyfs']
+2021-02-23 15:26:30,456|azureml.core.run|DEBUG|Adding new factory <function AutoMLRun._from_run_dto at 0x7fab898656a8> for run source automl
+2021-02-23 15:26:30,468|azureml.core.run|DEBUG|Adding new factory <function PipelineRun._from_dto at 0x7fabace79ae8> for run source azureml.PipelineRun
+2021-02-23 15:26:30,477|azureml.core.run|DEBUG|Adding new factory <function StepRun._from_reused_dto at 0x7fabace85598> for run source azureml.ReusedStepRun
+2021-02-23 15:26:30,488|azureml.core.run|DEBUG|Adding new factory <function StepRun._from_dto at 0x7fabace85510> for run source azureml.StepRun
+2021-02-23 15:26:30,498|azureml.core.run|DEBUG|Adding new factory <function ScriptRun._from_run_dto at 0x7fabae2b3e18> for run source azureml.scriptrun
+2021-02-23 15:26:30,499|azureml.core.run|DEBUG|Identity in use is not set. Falling back to using AMLToken
+2021-02-23 15:26:30,500|azureml.core.run|DEBUG|Identity in use is not set. Falling back to using AMLToken
+2021-02-23 15:26:30,500|azureml.core.run|DEBUG|Using AMLToken auth for remote run
+2021-02-23 15:26:30,500|azureml.core.run|DEBUG|Identity in use is not set. Falling back to using AMLToken
+2021-02-23 15:26:30,500|azureml.core.run|DEBUG|Using AMLToken auth for remote run
+2021-02-23 15:26:30,501|azureml.core.run|DEBUG|Using AMLToken auth for remote run
+2021-02-23 15:26:30,502|azureml.core.authentication.TokenRefresherDaemon|DEBUG|Starting daemon and triggering first instance
+2021-02-23 15:26:30,527|azureml._restclient.clientbase|INFO|Created a worker pool for first use
+2021-02-23 15:26:30,527|azureml.core.authentication|DEBUG|Time to expire 1814376.472802 seconds
+2021-02-23 15:26:30,527|azureml._restclient.service_context|DEBUG|Created a static thread pool for ServiceContext class
+2021-02-23 15:26:30,528|azureml.core.authentication|DEBUG|Time to expire 1814376.471503 seconds
+2021-02-23 15:26:30,529|azureml.core.authentication|DEBUG|Time to expire 1814376.470406 seconds
+2021-02-23 15:26:30,529|azureml._restclient.clientbase|DEBUG|ClientBase: Calling get with url None
+2021-02-23 15:26:30,529|azureml._restclient.service_context|DEBUG|Access an existing static threadpool for ServiceContext class
+2021-02-23 15:26:30,530|azureml._restclient.service_context|DEBUG|Access an existing static threadpool for ServiceContext class
+2021-02-23 15:26:30,567|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,568|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,568|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,569|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,569|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,570|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,570|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,570|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,571|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,571|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,571|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,572|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,572|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,572|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,572|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,573|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,573|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,573|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,581|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,581|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,581|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:30,673|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[START]
+2021-02-23 15:26:30,674|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient|DEBUG|ClientBase: Calling get_by_exp_id with url /history/v1.0/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/experimentids/{experimentId}/runs/{runId}
+2021-02-23 15:26:30,683|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[START]
+2021-02-23 15:26:30,687|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[START]
+2021-02-23 15:26:30,692|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient|DEBUG|ClientBase: Calling get_by_exp_id with url /history/v1.0/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/experimentids/{experimentId}/runs/{runId}
+2021-02-23 15:26:30,692|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient|DEBUG|ClientBase: Calling get_by_exp_id with url /history/v1.0/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/experimentids/{experimentId}/runs/{runId}
+2021-02-23 15:26:30,757|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[STOP]
+2021-02-23 15:26:30,759|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr|DEBUG|Constructing run from dto. type: azureml.scriptrun, source: None, props: {'_aml_system_scenario_identification': 'Remote.Featurization.Transform', '_azureml.ComputeTargetType': 'amlcompute', 'ContentSnapshotId': '506d4160-a2a4-4706-a7a2-6d1afe918dcc', 'ProcessInfoFile': 'azureml-logs/process_info.json', 'ProcessStatusFile': 'azureml-logs/process_status.json'}
+2021-02-23 15:26:30,759|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunContextManager|DEBUG|Valid logs dir, setting up content loader
+2021-02-23 15:26:30,761|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[STOP]
+2021-02-23 15:26:30,764|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[STOP]
+2021-02-23 15:26:30,765|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr|DEBUG|Constructing run from dto. type: azureml.scriptrun, source: None, props: {'_aml_system_scenario_identification': 'Remote.Featurization.Transform', '_azureml.ComputeTargetType': 'amlcompute', 'ContentSnapshotId': '506d4160-a2a4-4706-a7a2-6d1afe918dcc', 'ProcessInfoFile': 'azureml-logs/process_info.json', 'ProcessStatusFile': 'azureml-logs/process_status.json'}
+2021-02-23 15:26:30,765|azureml|WARNING|Could not import azureml.mlflow or azureml.contrib.mlflow mlflow APIs will not run against AzureML services.  Add azureml-mlflow as a conda dependency for the run if this behavior is desired
+2021-02-23 15:26:30,766|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr|DEBUG|Constructing run from dto. type: azureml.scriptrun, source: None, props: {'_aml_system_scenario_identification': 'Remote.Featurization.Transform', '_azureml.ComputeTargetType': 'amlcompute', 'ContentSnapshotId': '506d4160-a2a4-4706-a7a2-6d1afe918dcc', 'ProcessInfoFile': 'azureml-logs/process_info.json', 'ProcessStatusFile': 'azureml-logs/process_status.json'}
+2021-02-23 15:26:30,766|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunContextManager|DEBUG|Valid logs dir, setting up content loader
+2021-02-23 15:26:30,766|azureml.WorkerPool|DEBUG|[START]
+2021-02-23 15:26:30,766|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunContextManager|DEBUG|Valid logs dir, setting up content loader
+2021-02-23 15:26:30,767|azureml.SendRunKillSignal|DEBUG|[START]
+2021-02-23 15:26:30,767|azureml.RunStatusContext|DEBUG|[START]
+2021-02-23 15:26:30,767|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunContextManager.RunStatusContext|DEBUG|[START]
+2021-02-23 15:26:30,767|azureml.MetricsClient|DEBUG|[START]
+2021-02-23 15:26:30,767|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.MetricsClient|DEBUG|[START]
+2021-02-23 15:26:30,768|azureml.WorkingDirectoryCM|DEBUG|[START]
+2021-02-23 15:26:30,768|azureml.history._tracking.PythonWorkingDirectory.workingdir|DEBUG|[START]
+2021-02-23 15:26:30,768|azureml.history._tracking.PythonWorkingDirectory|INFO|Current working dir: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-139371/azureml/automl_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr/mounts/workspaceblobstore/azureml/AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr
+2021-02-23 15:26:30,768|azureml.history._tracking.PythonWorkingDirectory.workingdir|DEBUG|Calling pyfs
+2021-02-23 15:26:30,768|azureml.history._tracking.PythonWorkingDirectory.workingdir|DEBUG|Storing working dir for pyfs as /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-139371/azureml/automl_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr/mounts/workspaceblobstore/azureml/AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr
+2021-02-23 15:26:32,385|azureml.core.run|DEBUG|Identity in use is not set. Falling back to using AMLToken
+2021-02-23 15:26:32,385|azureml.core.run|DEBUG|Using AMLToken auth for remote run
+2021-02-23 15:26:32,386|azureml._restclient.service_context|DEBUG|Access an existing static threadpool for ServiceContext class
+2021-02-23 15:26:32,386|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:32,386|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:32,387|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:32,387|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:32,387|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:32,387|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:32,387|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:32,401|azureml.Run#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[START]
+2021-02-23 15:26:32,401|azureml.Run#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.RunHistoryFacade.RunClient|DEBUG|ClientBase: Calling get_by_exp_id with url /history/v1.0/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/experimentids/{experimentId}/runs/{runId}
+2021-02-23 15:26:32,728|azureml.Run#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[STOP]
+2021-02-23 15:26:32,730|azureml.Run#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e|DEBUG|Constructing run from dto. type: automl, source: automl, props: {'num_iterations': '1000', 'training_type': 'TrainFull', 'acquisition_function': 'EI', 'primary_metric': 'AUC_weighted', 'train_split': '0', 'acquisition_parameter': '0', 'num_cross_validation': None, 'target': 'cluster-automl2', 'AMLSettingsJsonString': '{"path":null,"name":"capstone-automl-exp","subscription_id":"d7f39349-a66b-446e-aba6-0053c2cf1c11","resource_group":"aml-quickstarts-139371","workspace_name":"quick-starts-ws-139371","region":"southcentralus","compute_target":"cluster-automl2","spark_service":null,"azure_service":"remote","many_models":false,"pipeline_fetch_max_batch_size":1,"iterations":1000,"primary_metric":"AUC_weighted","task_type":"classification","data_script":null,"validation_size":0.0,"n_cross_validations":null,"y_min":null,"y_max":null,"num_classes":null,"featurization":"auto","_ignore_package_version_incompatibilities":false,"is_timeseries":false,"max_cores_per_iteration":1,"max_concurrent_iterations":5,"iteration_timeout_minutes":null,"mem_in_mb":null,"enforce_time_on_windows":false,"experiment_timeout_minutes":30,"experiment_exit_score":null,"whitelist_models":null,"blacklist_algos":["TensorFlowLinearClassifier","TensorFlowDNN"],"supported_models":["BernoulliNaiveBayes","KNN","RandomForest","ExtremeRandomTrees","MultinomialNaiveBayes","GradientBoosting","DecisionTree","TensorFlowLinearClassifier","XGBoostClassifier","AveragedPerceptronClassifier","SGD","LogisticRegression","TensorFlowDNN","LightGBM","SVM","LinearSVM"],"auto_blacklist":true,"blacklist_samples_reached":false,"exclude_nan_labels":true,"verbosity":20,"_debug_log":"azureml_automl.log","show_warnings":false,"model_explainability":true,"service_url":null,"sdk_url":null,"sdk_packages":null,"enable_onnx_compatible_models":true,"enable_split_onnx_featurizer_estimator_models":false,"vm_type":"STANDARD_DS3_V2","telemetry_verbosity":20,"send_telemetry":true,"enable_dnn":false,"scenario":"SDK-1.13.0","environment_label":null,"force_text_dnn":false,"enable_feature_sweeping":false,"enable_early_stopping":true,"early_stopping_n_iters":10,"metrics":null,"enable_ensembling":true,"enable_stack_ensembling":false,"ensemble_iterations":15,"enable_tf":false,"enable_subsampling":null,"subsample_seed":null,"enable_nimbusml":false,"enable_streaming":false,"force_streaming":false,"track_child_runs":true,"allowed_private_models":[],"label_column_name":"target","weight_column_name":null,"cv_split_column_names":null,"enable_local_managed":false,"_local_managed_run_id":null,"cost_mode":1,"lag_length":0,"metric_operation":"maximize","preprocess":true}', 'DataPrepJsonString': '{\\"training_data\\": \\"{\\\\\\"blocks\\\\\\": [{\\\\\\"id\\\\\\": \\\\\\"17be2681-4f36-475c-a446-a1c60d9a2778\\\\\\", \\\\\\"type\\\\\\": \\\\\\"Microsoft.DPrep.GetFilesBlock\\\\\\", \\\\\\"arguments\\\\\\": {\\\\\\"isArchive\\\\\\": false, \\\\\\"path\\\\\\": {\\\\\\"target\\\\\\": 4, \\\\\\"resourceDetails\\\\\\": [{\\\\\\"path\\\\\\": \\\\\\"https://raw.githubusercontent.com/Daniel-car1/nd00333-capstone/main/heart.csv\\\\\\"}]}}, \\\\\\"localData\\\\\\": {}, \\\\\\"isEnabled\\\\\\": true, \\\\\\"name\\\\\\": null, \\\\\\"annotation\\\\\\": null}, {\\\\\\"id\\\\\\": \\\\\\"21d62914-ab3b-418f-a722-08fb371addb0\\\\\\", \\\\\\"type\\\\\\": \\\\\\"Microsoft.DPrep.ParseDelimitedBlock\\\\\\", \\\\\\"arguments\\\\\\": {\\\\\\"columnHeadersMode\\\\\\": 3, \\\\\\"fileEncoding\\\\\\": 0, \\\\\\"handleQuotedLineBreaks\\\\\\": false, \\\\\\"preview\\\\\\": false, \\\\\\"separator\\\\\\": \\\\\\",\\\\\\", \\\\\\"skipRows\\\\\\": 0, \\\\\\"skipRowsMode\\\\\\": 0}, \\\\\\"localData\\\\\\": {}, \\\\\\"isEnabled\\\\\\": true, \\\\\\"name\\\\\\": null, \\\\\\"annotation\\\\\\": null}, {\\\\\\"id\\\\\\": \\\\\\"77c7020a-fc3e-4063-a97a-3e45dfaabbda\\\\\\", \\\\\\"type\\\\\\": \\\\\\"Microsoft.DPrep.DropColumnsBlock\\\\\\", \\\\\\"arguments\\\\\\": {\\\\\\"columns\\\\\\": {\\\\\\"type\\\\\\": 0, \\\\\\"details\\\\\\": {\\\\\\"selectedColumns\\\\\\": [\\\\\\"Path\\\\\\"]}}}, \\\\\\"localData\\\\\\": {}, \\\\\\"isEnabled\\\\\\": true, \\\\\\"name\\\\\\": null, \\\\\\"annotation\\\\\\": null}, {\\\\\\"id\\\\\\": \\\\\\"f0081254-54be-4888-9887-7bb11e267e51\\\\\\", \\\\\\"type\\\\\\": \\\\\\"Microsoft.DPrep.SetColumnTypesBlock\\\\\\", \\\\\\"arguments\\\\\\": {\\\\\\"columnConversion\\\\\\": [{\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"age\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"sex\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"cp\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"trestbps\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"chol\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"fbs\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"restecg\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"thalach\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"exang\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"oldpeak\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 3}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"slope\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"ca\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"thal\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}, {\\\\\\"column\\\\\\": {\\\\\\"type\\\\\\": 2, \\\\\\"details\\\\\\": {\\\\\\"selectedColumn\\\\\\": \\\\\\"target\\\\\\"}}, \\\\\\"typeProperty\\\\\\": 2}]}, \\\\\\"localData\\\\\\": {}, \\\\\\"isEnabled\\\\\\": true, \\\\\\"name\\\\\\": null, \\\\\\"annotation\\\\\\": null}], \\\\\\"inspectors\\\\\\": [], \\\\\\"meta\\\\\\": {\\\\\\"savedDatasetId\\\\\\": \\\\\\"c558cab2-0772-41e8-a424-7a01c66cc610\\\\\\", \\\\\\"datasetType\\\\\\": \\\\\\"tabular\\\\\\", \\\\\\"subscriptionId\\\\\\": \\\\\\"d7f39349-a66b-446e-aba6-0053c2cf1c11\\\\\\", \\\\\\"workspaceId\\\\\\": \\\\\\"06ced75c-6ef1-49c3-a6b8-1a1fc8649d8c\\\\\\", \\\\\\"workspaceLocation\\\\\\": \\\\\\"southcentralus\\\\\\"}}\\", \\"activities\\": 0}', 'EnableSubsampling': None, 'runTemplate': 'AutoML', 'azureml.runsource': 'automl', 'display_task_type': 'classification', 'dependencies_versions': '{"azureml-widgets": "1.20.0", "azureml-train": "1.20.0", "azureml-train-restclients-hyperdrive": "1.20.0", "azureml-train-core": "1.20.0", "azureml-train-automl": "1.20.0", "azureml-train-automl-runtime": "1.20.0", "azureml-train-automl-client": "1.20.0", "azureml-tensorboard": "1.20.0", "azureml-telemetry": "1.20.0", "azureml-sdk": "1.20.0", "azureml-samples": "0+unknown", "azureml-pipeline": "1.20.0", "azureml-pipeline-steps": "1.20.0", "azureml-pipeline-core": "1.20.0", "azureml-opendatasets": "1.20.0", "azureml-model-management-sdk": "1.0.1b6.post1", "azureml-mlflow": "1.20.0.post1", "azureml-interpret": "1.20.0", "azureml-explain-model": "1.20.0", "azureml-defaults": "1.20.0", "azureml-dataset-runtime": "1.20.0", "azureml-dataprep": "2.7.3", "azureml-dataprep-rslex": "1.5.0", "azureml-dataprep-native": "27.0.0", "azureml-datadrift": "1.20.0", "azureml-core": "1.20.0", "azureml-contrib-services": "1.20.0", "azureml-contrib-server": "1.20.0", "azureml-contrib-reinforcementlearning": "1.20.0", "azureml-contrib-pipeline-steps": "1.20.0", "azureml-contrib-notebook": "1.20.0", "azureml-contrib-interpret": "1.20.0", "azureml-contrib-gbdt": "1.20.0", "azureml-contrib-fairness": "1.20.0", "azureml-contrib-dataset": "1.20.0", "azureml-cli-common": "1.20.0", "azureml-automl-runtime": "1.20.0", "azureml-automl-core": "1.20.0", "azureml-accel-models": "1.20.0"}', '_aml_system_scenario_identification': 'Remote.Parent', 'ClientType': 'SDK', 'environment_cpu_name': 'AzureML-AutoML', 'environment_cpu_label': 'prod', 'environment_gpu_name': 'AzureML-AutoML-GPU', 'environment_gpu_label': 'prod', 'root_attribution': 'automl', 'attribution': 'AutoML', 'Orchestrator': 'AutoML', 'CancelUri': 'https://southcentralus.experiments.azureml.net/jasmine/v1.0/subscriptions/d7f39349-a66b-446e-aba6-0053c2cf1c11/resourceGroups/aml-quickstarts-139371/providers/Microsoft.MachineLearningServices/workspaces/quick-starts-ws-139371/experimentids/8a76ef57-62d3-4d69-881d-48abd66e6958/cancel/AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e', 'ClientSdkVersion': '1.22.0', 'snapshotId': '00000000-0000-0000-0000-000000000000', 'SetupRunId': 'AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_setup', 'SetupRunContainerId': 'dcid.AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_setup', 'FeaturizationRunJsonPath': 'featurizer_container.json', 'FeaturizationRunId': 'AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize'}
+2021-02-23 15:26:32,731|azureml.Run#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.RunContextManager|DEBUG|Valid logs dir, setting up content loader
+2021-02-23 15:26:32,751|azureml.data.datastore_client|DEBUG|Getting datastore: workspaceblobstore
+2021-02-23 15:26:32,751|azureml.data.datastore_client|INFO|<azureml.core.authentication.AzureMLTokenAuthentication object at 0x7fabafdc2588>
+2021-02-23 15:26:32,955|azureml.data.datastore_client|DEBUG|Received DTO from the datastore service
+2021-02-23 15:26:33,028|azureml._vendor.azure_storage.common._auth|DEBUG|String_to_sign=PUT
+
+
+
+
+
+
+
+
+
+
+
+x-ms-client-request-id:8263eef0-75eb-11eb-b069-c923e6cf2c7d
+x-ms-date:Tue, 23 Feb 2021 15:26:33 GMT
+x-ms-version:2018-03-28
+/mlstrg139371/automl-706510b9-e904-4da3-80f4-3cd9ee175e4e
+restype:share
+2021-02-23 15:26:33,122|azureml._vendor.azure_storage.common._auth|DEBUG|String_to_sign=GET
+
+
+
+
+
+
+
+
+
+
+
+x-ms-client-request-id:82725102-75eb-11eb-b069-c923e6cf2c7d
+x-ms-date:Tue, 23 Feb 2021 15:26:33 GMT
+x-ms-version:2018-03-28
+/mlstrg139371/automl-706510b9-e904-4da3-80f4-3cd9ee175e4e
+comp:list
+restype:directory
+2021-02-23 15:26:33,136|azureml._vendor.azure_storage.common._auth|DEBUG|String_to_sign=GET
+
+
+
+
+
+
+
+
+
+
+
+x-ms-client-request-id:82745d3a-75eb-11eb-b069-c923e6cf2c7d
+x-ms-date:Tue, 23 Feb 2021 15:26:33 GMT
+x-ms-range:bytes=0-33554431
+x-ms-version:2018-03-28
+/mlstrg139371/automl-706510b9-e904-4da3-80f4-3cd9ee175e4e/saved_as
+2021-02-23 15:26:33,235|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[START]
+2021-02-23 15:26:33,235|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient|DEBUG|ClientBase: Calling get_by_exp_id with url /history/v1.0/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/experimentids/{experimentId}/runs/{runId}
+2021-02-23 15:26:33,235|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[START]
+2021-02-23 15:26:33,240|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient|DEBUG|ClientBase: Calling get_by_exp_id with url /history/v1.0/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/experimentids/{experimentId}/runs/{runId}
+2021-02-23 15:26:33,301|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[STOP]
+2021-02-23 15:26:33,306|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.RunClient.get_by_exp_id-async:False|DEBUG|[STOP]
+2021-02-23 15:26:33,306|azureml._base_sdk_common.service_discovery|DEBUG|Found history service url in environment variable AZUREML_SERVICE_ENDPOINT, history service url: https://southcentralus.experiments.azureml.net.
+2021-02-23 15:26:33,311|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.ArtifactsClient|DEBUG|output_file_path for download_artifact is not a directory.
+2021-02-23 15:26:33,312|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.ArtifactsClient.get_content_information-async:False|DEBUG|[START]
+2021-02-23 15:26:33,312|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.ArtifactsClient|DEBUG|ClientBase: Calling get_content_information with url /artifact/v2.0/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/artifacts/contentinfo/{origin}/{container}/{path}
+2021-02-23 15:26:33,518|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.ArtifactsClient.get_content_information-async:False|DEBUG|[STOP]
+2021-02-23 15:26:33,518|azureml._restclient.clientbase|DEBUG|ClientBase: Calling download_file with url None
+2021-02-23 15:26:33,518|azureml._file_utils.file_utils|DEBUG|downloading file to feature_config.pkl, with max_retries: 5, stream: True, and protocol: https
+2021-02-23 15:26:33,566|azureml._file_utils.file_utils|DEBUG|Downloaded file feature_config.pkl with size 3454.
+2021-02-23 15:26:33,570|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.ArtifactsClient|DEBUG|output_file_path for download_artifact is not a directory.
+2021-02-23 15:26:33,571|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.ArtifactsClient.get_content_information-async:False|DEBUG|[START]
+2021-02-23 15:26:33,571|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.ArtifactsClient|DEBUG|ClientBase: Calling get_content_information with url /artifact/v2.0/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearningServices/workspaces/{workspaceName}/artifacts/contentinfo/{origin}/{container}/{path}
+2021-02-23 15:26:33,643|azureml._SubmittedRun#AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.RunHistoryFacade.ArtifactsClient.get_content_information-async:False|DEBUG|[STOP]
+2021-02-23 15:26:33,643|azureml._restclient.clientbase|DEBUG|ClientBase: Calling download_file with url None
+2021-02-23 15:26:33,644|azureml._file_utils.file_utils|DEBUG|downloading file to feature_names.pkl, with max_retries: 5, stream: True, and protocol: https
+2021-02-23 15:26:33,666|azureml._file_utils.file_utils|DEBUG|Downloaded file feature_names.pkl with size 3374.
+2021-02-23 15:27:00,504|azureml.core.authentication|DEBUG|Time to expire 1814346.495464 seconds
+2021-02-23 15:27:30,504|azureml.core.authentication|DEBUG|Time to expire 1814316.495167 seconds
+2021-02-23 15:28:00,505|azureml.core.authentication|DEBUG|Time to expire 1814286.494682 seconds
+2021-02-23 15:28:30,505|azureml.core.authentication|DEBUG|Time to expire 1814256.494284 seconds
+2021-02-23 15:29:00,506|azureml.core.authentication|DEBUG|Time to expire 1814226.493737 seconds
+2021-02-23 15:29:30,506|azureml.core.authentication|DEBUG|Time to expire 1814196.493185 seconds
+2021-02-23 15:30:00,507|azureml.core.authentication|DEBUG|Time to expire 1814166.492921 seconds
+2021-02-23 15:30:30,507|azureml.core.authentication|DEBUG|Time to expire 1814136.492405 seconds
+2021-02-23 15:31:00,508|azureml.core.authentication|DEBUG|Time to expire 1814106.492021 seconds
+2021-02-23 15:31:30,508|azureml.core.authentication|DEBUG|Time to expire 1814076.491479 seconds
+2021-02-23 15:32:00,509|azureml.core.authentication|DEBUG|Time to expire 1814046.49098 seconds
+2021-02-23 15:32:30,509|azureml.core.authentication|DEBUG|Time to expire 1814016.490566 seconds
+2021-02-23 15:33:00,510|azureml.core.authentication|DEBUG|Time to expire 1813986.490047 seconds
+2021-02-23 15:33:30,510|azureml.core.authentication|DEBUG|Time to expire 1813956.489605 seconds
+2021-02-23 15:34:00,510|azureml.core.authentication|DEBUG|Time to expire 1813926.489096 seconds
+2021-02-23 15:34:30,511|azureml.core.authentication|DEBUG|Time to expire 1813896.488649 seconds
+2021-02-23 15:35:00,511|azureml.core.authentication|DEBUG|Time to expire 1813866.488136 seconds
+2021-02-23 15:35:30,512|azureml.core.authentication|DEBUG|Time to expire 1813836.487678 seconds
+2021-02-23 15:36:00,513|azureml.core.authentication|DEBUG|Time to expire 1813806.487065 seconds
+2021-02-23 15:36:30,513|azureml.core.authentication|DEBUG|Time to expire 1813776.486589 seconds

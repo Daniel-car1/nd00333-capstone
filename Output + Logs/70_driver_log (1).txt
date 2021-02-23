@@ -1,0 +1,131 @@
+2021/02/23 15:06:20 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/info
+2021/02/23 15:06:20 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/status
+[2021-02-23T15:06:21.819655] Entering context manager injector.
+[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['setup_AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.py', 'automl_driver.py'])
+Script type = None
+Starting the daemon thread to refresh tokens in background for process with pid = 104
+[2021-02-23T15:06:23.622996] Entering Run History Context Manager.
+[2021-02-23T15:06:26.834826] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-139371/azureml/automl_706510b9-e904-4da3-80f4-3cd9ee175e4e_setup/mounts/workspaceblobstore/azureml/AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_setup
+[2021-02-23T15:06:26.835172] Preparing to call script [setup_AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.py] with arguments:['automl_driver.py']
+[2021-02-23T15:06:26.835279] After variable expansion, calling script [setup_AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.py] with arguments:['automl_driver.py']
+
+Starting the setup....
+2021-02-23 15:06:28.605 - INFO - Successfully got the cache data store, caching enabled.
+2021-02-23 15:06:28.605 - INFO - Took 0.21895384788513184 seconds to retrieve cache data store
+2021-02-23 15:06:28.845 - INFO - ActivityStarted: load
+2021-02-23 15:06:28.858 - INFO - ActivityCompleted: Activity=load, HowEnded=Success, Duration=12.39[ms]
+2021-02-23 15:06:28.858 - INFO - Preparing input data for setup iteration for run AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_setup.
+2021-02-23 15:06:28.858 - INFO - Resolving dataflows using dprep json.
+2021-02-23 15:06:28.858 - INFO - DataPrep version: 2.9.1
+2021-02-23 15:06:28.859 - INFO - DataPrep log client session id: f1c15331-7e42-465d-8b4b-803d1d8312cc
+2021-02-23 15:06:28.860 - INFO - ActivityStarted: ParsingDataprepJSON
+2021-02-23 15:06:28.860 - INFO - Deserializing dataflow.
+2021-02-23 15:06:35.379 - INFO - ActivityCompleted: Activity=ParsingDataprepJSON, HowEnded=Success, Duration=6519.77[ms]
+2021-02-23 15:06:35.380 - INFO - ActivityStarted: BuildingDataCharacteristics
+2021-02-23 15:06:35.380 - INFO - Starting data characteristics calculation. This might take a while...
+2021-02-23 15:13:16.673 - INFO - ActivityCompleted: Activity=BuildingDataCharacteristics, HowEnded=Success, Duration=401292.88[ms]
+2021-02-23 15:13:16.673 - INFO - Successfully retrieved data using <class 'str'>.
+2021-02-23 15:13:16.673 - INFO - Streaming is not conducive due to incompatible settings. Reason[s]: [ONNX compatibility is not supported]
+2021-02-23 15:13:16.682 - INFO - Preparing to fetch all feature profiles for the run.
+2021-02-23 15:13:16.682 - INFO - There are no feature profile requests to make for this run.
+2021-02-23 15:13:16.682 - INFO - Service responded with streaming disabled
+2021-02-23 15:25:17.664 - INFO - Rule based validation: Using rule based cv now with cv 10.
+2021-02-23 15:25:17.665 - INFO - {"Module": "[ONNXConverter]", "Event": "[InitInput]", "Status": "[Start]", "ModelName": "", "ModelDesc": null, "Message": "Input initialization started."}
+2021-02-23 15:25:17.693 - INFO - {"Module": "[ONNXConverter]", "Event": "[InitInput]", "Status": "[End.Succeeded]", "ModelName": "", "ModelDesc": null, "Message": "Input initialization succeeded."}
+2021-02-23 15:25:17.693 - INFO - Successfully initialized ONNX converter for run AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.
+2021-02-23 15:25:17.699 - INFO - Begin saving onnx initialization metadata for run AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.
+2021-02-23 15:25:17.706 - INFO - Adding data to Azure file store cache
+2021-02-23 15:25:17.707 - INFO - ActivityStarted: add
+2021-02-23 15:25:17.707 - INFO - Uploading key: _CACHE_STORE_KEY_ONNX_CONVERTER_INIT_METADATA_
+2021-02-23 15:25:17.707 - INFO - ActivityStarted: _serialize_and_upload
+2021-02-23 15:25:17.927 - INFO - ActivityStarted: _persist_saved_as_file
+2021-02-23 15:25:18.015 - INFO - ActivityCompleted: Activity=_persist_saved_as_file, HowEnded=Success, Duration=87.25[ms]
+2021-02-23 15:25:18.021 - INFO - Persisted saved_as file. The saved_as object is: {'_CACHE_STORE_KEY_ONNX_CONVERTER_INIT_METADATA_': <_SavedAsProtocol.PICKLE: 1>}
+2021-02-23 15:25:18.028 - INFO - ActivityCompleted: Activity=_serialize_and_upload, HowEnded=Success, Duration=320.78[ms]
+2021-02-23 15:25:18.028 - INFO - ActivityCompleted: Activity=add, HowEnded=Success, Duration=321.52[ms]
+2021-02-23 15:25:18.029 - INFO - Successfully Saved onnx initialization metadata for run AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.
+2021-02-23 15:25:18.029 - INFO - Validating training data.
+2021-02-23 15:25:18.029 - INFO - Start data validation.
+2021-02-23 15:25:18.051 - INFO - 2 unique classes detected.
+2021-02-23 15:25:18.052 - INFO - Input data successfully validated.
+2021-02-23 15:25:18.052 - INFO - AutoML setup phase for run AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_setup.
+2021-02-23 15:25:18.052 - INFO - Checking if feature sweeping is necessary.
+2021-02-23 15:25:18.052 - INFO - Pre-processing user data
+2021-02-23 15:25:18.056 - INFO - The size of the raw data is: 34663
+2021-02-23 15:25:18.059 - INFO - [YCol]RawFeatureStats:{"num_unique_vals": "2", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.061 - INFO - X_raw datatype is <class 'pandas.core.frame.DataFrame'>, shape is (303, 13), datasize is 31640.
+2021-02-23 15:25:18.061 - INFO - X_valid_raw is None, no data details to log.
+2021-02-23 15:25:18.061 - INFO - y_raw datatype is <class 'numpy.ndarray'>, shape is (303,), datasize is 2424.
+2021-02-23 15:25:18.062 - INFO - y_valid_raw is None, no data details to log.
+2021-02-23 15:25:18.062 - INFO - Inspecting target column for missing values.
+2021-02-23 15:25:18.062 - INFO - Start checking class balancing on y data.
+2021-02-23 15:25:18.063 - INFO - X datatype is <class 'pandas.core.frame.DataFrame'>, shape is (303, 13), datasize is 31640.
+2021-02-23 15:25:18.064 - INFO - X_valid is None, no data details to log.
+2021-02-23 15:25:18.064 - INFO - y datatype is <class 'numpy.ndarray'>, shape is (303,), datasize is 2424.
+2021-02-23 15:25:18.064 - INFO - y_valid is None, no data details to log.
+2021-02-23 15:25:18.082 - INFO - Start getting transformers.
+2021-02-23 15:25:18.083 - INFO - [XColNum:0]RawFeatureStats:{"num_unique_vals": "41", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.083 - INFO - Preprocess transformer for col 0, datatype: int64, detected datatype Numeric
+2021-02-23 15:25:18.083 - INFO - [XColNum:3]RawFeatureStats:{"num_unique_vals": "49", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.084 - INFO - Preprocess transformer for col 3, datatype: int64, detected datatype Numeric
+2021-02-23 15:25:18.084 - INFO - [XColNum:4]RawFeatureStats:{"num_unique_vals": "152", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.084 - INFO - Preprocess transformer for col 4, datatype: int64, detected datatype Numeric
+2021-02-23 15:25:18.084 - INFO - [XColNum:7]RawFeatureStats:{"num_unique_vals": "91", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.084 - INFO - Preprocess transformer for col 7, datatype: int64, detected datatype Numeric
+2021-02-23 15:25:18.084 - INFO - [XColNum:9]RawFeatureStats:{"num_unique_vals": "40", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"floating\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.084 - INFO - Preprocess transformer for col 9, datatype: float64, detected datatype Numeric
+2021-02-23 15:25:18.085 - INFO - [XColNum:1]RawFeatureStats:{"num_unique_vals": "2", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.085 - INFO - Preprocess transformer for col 1, datatype: int64, detected datatype Categorical
+2021-02-23 15:25:18.085 - INFO - [XColNum:2]RawFeatureStats:{"num_unique_vals": "4", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.085 - INFO - Preprocess transformer for col 2, datatype: int64, detected datatype Categorical
+2021-02-23 15:25:18.085 - INFO - [XColNum:5]RawFeatureStats:{"num_unique_vals": "2", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.085 - INFO - Preprocess transformer for col 5, datatype: int64, detected datatype Categorical
+2021-02-23 15:25:18.086 - INFO - [XColNum:6]RawFeatureStats:{"num_unique_vals": "3", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.086 - INFO - Preprocess transformer for col 6, datatype: int64, detected datatype Categorical
+2021-02-23 15:25:18.086 - INFO - [XColNum:8]RawFeatureStats:{"num_unique_vals": "2", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.086 - INFO - Preprocess transformer for col 8, datatype: int64, detected datatype Categorical
+2021-02-23 15:25:18.086 - INFO - [XColNum:10]RawFeatureStats:{"num_unique_vals": "3", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.086 - INFO - Preprocess transformer for col 10, datatype: int64, detected datatype Categorical
+2021-02-23 15:25:18.087 - INFO - [XColNum:11]RawFeatureStats:{"num_unique_vals": "5", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.087 - INFO - Preprocess transformer for col 11, datatype: int64, detected datatype Categorical
+2021-02-23 15:25:18.087 - INFO - [XColNum:12]RawFeatureStats:{"num_unique_vals": "4", "total_number_vals": "303", "total_number_vals_including_nans": "303", "num_na": "0", "column_type": "\"integer\"", "lengths": "{}", "num_unique_lens": "0", "average_entry_length": "0", "average_number_spaces": "0", "cardinality_ratio": "0", "is_datetime": "false", "is_all_nan": "false", "unicode_median_value": "0"}
+2021-02-23 15:25:18.087 - INFO - Preprocess transformer for col 12, datatype: int64, detected datatype Categorical
+2021-02-23 15:25:18.087 - INFO - ActivityStarted: FeatureSweeping
+2021-02-23 15:25:18.087 - INFO - Feature sweeping disabled.
+2021-02-23 15:25:18.087 - INFO - ActivityCompleted: Activity=FeatureSweeping, HowEnded=Success, Duration=0.12[ms]
+2021-02-23 15:25:18.088 - INFO - Transforms:
+col 0, transformers: SimpleImputer
+col 3, transformers: SimpleImputer
+col 4, transformers: SimpleImputer
+col 7, transformers: SimpleImputer
+col 9, transformers: SimpleImputer
+2021-02-23 15:25:18.088 - INFO - The stats_computation for raw data are following:-
+	Number of Text features: 0
+	Number of Hashes features: 0
+	Number of DateTime features: 0
+	Number of Ignore features: 0
+	Number of Categorical features: 8
+	Number of CategoricalHash features: 0
+	Number of Numeric features: 5
+	Number of AllNan features: 0
+2021-02-23 15:25:18.088 - INFO - End getting transformers.
+2021-02-23 15:25:18.088 - INFO - Feature sweeping enabled: False
+2021-02-23 15:25:18.088 - INFO - Feature sweeping timeout: 86400
+2021-02-23 15:25:18.101 - INFO - Saving artifacts required for separate featurization run.
+2021-02-23 15:25:18.115 - INFO - ActivityStarted: FeatureConfigUpload
+2021-02-23 15:25:18.899 - INFO - ActivityCompleted: Activity=FeatureConfigUpload, HowEnded=Success, Duration=784.03[ms]
+2021-02-23 15:25:18.910 - INFO - ActivityStarted: EngineeredFeatureNamesUpload
+2021-02-23 15:25:19.210 - INFO - ActivityCompleted: Activity=EngineeredFeatureNamesUpload, HowEnded=Success, Duration=300.03[ms]
+2021-02-23 15:25:19.322 - INFO - ActivityStarted: FeaturizationJsonUpload
+2021-02-23 15:25:19.623 - INFO - ActivityCompleted: Activity=FeaturizationJsonUpload, HowEnded=Success, Duration=301.16[ms]
+Setup run completed successfully!
+Starting the daemon thread to refresh tokens in background for process with pid = 104
+
+
+[2021-02-23T15:25:20.025146] The experiment completed successfully. Finalizing run...
+Cleaning up all outstanding Run operations, waiting 900.0 seconds
+4 items cleaning up...
+Cleanup took 0.25986766815185547 seconds
+[2021-02-23T15:25:20.708053] Finished context manager injector.
+2021/02/23 15:25:28 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/status
+2021/02/23 15:25:28 Process Exiting with Code:  0

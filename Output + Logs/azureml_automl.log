@@ -1,0 +1,24 @@
+2021-02-23 15:26:32.956 - INFO - 106 - azureml.train.automl.runtime._entrypoints.utils.common._get_cache_data_store:198 - Successfully got the cache data store, caching enabled.
+2021-02-23 15:26:32.956 - INFO - 106 - azureml.train.automl.runtime._entrypoints.utils.common._get_cache_data_store:209 - Took 0.20488357543945312 seconds to retrieve cache data store
+2021-02-23 15:26:33.122 - INFO - 106 - azureml.automl.runtime.shared.cache_store._log_activity:54 - ActivityStarted: load
+2021-02-23 15:26:33.131 - INFO - 106 - azureml.train.automl.runtime._azurefilecachestore._load_saved_as_object_from_file:283 - Loading the saved_as object from cache.
+2021-02-23 15:26:33.131 - INFO - 106 - azureml.automl.runtime.shared.cache_store._log_activity:54 - ActivityStarted: _load_saved_as_object_from_file
+2021-02-23 15:26:33.228 - INFO - 106 - azureml.train.automl.runtime._azurefilecachestore._load_saved_as_object_from_file:291 - Loaded saved_as file. The saved_as object is: {'_CACHE_STORE_KEY_ONNX_CONVERTER_INIT_METADATA_': <_SavedAsProtocol.PICKLE: 1>}
+2021-02-23 15:26:33.229 - INFO - 106 - azureml.automl.runtime.shared.cache_store._log_activity:92 - ActivityCompleted: Activity=_load_saved_as_object_from_file, HowEnded=Success, Duration=97.64[ms]
+2021-02-23 15:26:33.234 - INFO - 106 - azureml.automl.runtime.shared.cache_store._log_activity:92 - ActivityCompleted: Activity=load, HowEnded=Success, Duration=112.49[ms]
+2021-02-23 15:26:33.666 - INFO - 106 - azureml.train.automl.runtime._entrypoints.utils.featurization.transfer_files_from_setup:139 - Setup artifacts successfully retrieved.
+2021-02-23 15:26:33.666 - INFO - 106 - azureml.train.automl.runtime._entrypoints.utils.featurization._prep_input_data:53 - Preparing input data for featurization iteration for run AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.
+2021-02-23 15:26:33.666 - INFO - 106 - azureml.train.automl.runtime._data_preparer.get_preparer:316 - Resolving dataflows using dprep json.
+2021-02-23 15:26:33.666 - INFO - 106 - azureml.train.automl.runtime._data_preparer.get_preparer:317 - DataPrep version: 2.9.1
+2021-02-23 15:26:33.666 - INFO - 106 - azureml.train.automl.runtime._data_preparer.get_preparer:320 - DataPrep log client session id: 27f7c01b-3401-47c7-b3eb-7ba57997997c
+2021-02-23 15:26:33.666 - INFO - 106 - azureml.train.automl.runtime._data_preparer._log_activity:54 - ActivityStarted: ParsingDataprepJSON
+2021-02-23 15:26:33.667 - INFO - 106 - azureml.train.automl.runtime._data_preparer._parse:221 - Deserializing dataflow.
+2021-02-23 15:26:40.384 - INFO - 106 - azureml.train.automl.runtime._data_preparer._log_activity:92 - ActivityCompleted: Activity=ParsingDataprepJSON, HowEnded=Success, Duration=6717.47[ms]
+2021-02-23 15:26:40.386 - INFO - 106 - azureml.train.automl.runtime._data_preparer._log_activity:54 - ActivityStarted: BuildingDataCharacteristics
+2021-02-23 15:26:40.386 - INFO - 106 - azureml.train.automl.runtime._data_preparer._build_data_characterstics:131 - Starting data characteristics calculation. This might take a while...
+2021-02-23 15:33:24.616 - INFO - 106 - azureml.train.automl.runtime._data_preparer._log_activity:92 - ActivityCompleted: Activity=BuildingDataCharacteristics, HowEnded=Success, Duration=404230.37[ms]
+2021-02-23 15:33:24.616 - INFO - 106 - azureml.train.automl.runtime._data_preparer.get_preparer:339 - Successfully retrieved data using <class 'str'>.
+2021-02-23 15:33:24.617 - INFO - 106 - azureml.train.automl.runtime._entrypoints.utils.featurization._are_inputs_conducive_for_streaming:179 - Streaming is not conducive due to incompatible settings. Reason[s]: [ONNX compatibility is not supported]
+2021-02-23 15:33:24.625 - INFO - 106 - azureml.train.automl._automl_feature_config_manager.fetch_all_feature_profiles_for_run:55 - Preparing to fetch all feature profiles for the run.
+2021-02-23 15:33:24.625 - INFO - 106 - azureml.train.automl._automl_feature_config_manager.fetch_all_feature_profiles_for_run:75 - There are no feature profile requests to make for this run.
+2021-02-23 15:33:24.625 - INFO - 106 - azureml.train.automl.runtime._entrypoints.utils.featurization._prep_input_data:81 - Service responded with streaming disabled

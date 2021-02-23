@@ -1,0 +1,38 @@
+2021/02/23 15:26:24 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/info
+2021/02/23 15:26:24 Attempt 1 of http call to http://10.0.0.4:16384/sendlogstoartifacts/status
+[2021-02-23T15:26:25.777509] Entering context manager injector.
+[context_manager_injector.py] Command line Options: Namespace(inject=['ProjectPythonPath:context_managers.ProjectPythonPath', 'RunHistory:context_managers.RunHistory', 'TrackUserError:context_managers.TrackUserError'], invocation=['featurize_AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.py'])
+Script type = None
+Starting the daemon thread to refresh tokens in background for process with pid = 106
+[2021-02-23T15:26:27.750182] Entering Run History Context Manager.
+[2021-02-23T15:26:30.943167] Current directory: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-139371/azureml/automl_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr/mounts/workspaceblobstore/azureml/AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr
+[2021-02-23T15:26:30.943509] Preparing to call script [featurize_AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.py] with arguments:[]
+[2021-02-23T15:26:30.943578] After variable expansion, calling script [featurize_AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e.py] with arguments:[]
+
+Starting the featurization....
+Set enable_streaming flag to False
+WARNING:root:Received unrecognized parameter use_incremental_learning
+2021-02-23 15:26:32.956 - INFO - Successfully got the cache data store, caching enabled.
+2021-02-23 15:26:32.956 - INFO - Took 0.20488357543945312 seconds to retrieve cache data store
+2021-02-23 15:26:33.122 - INFO - ActivityStarted: load
+2021-02-23 15:26:33.131 - INFO - Loading the saved_as object from cache.
+2021-02-23 15:26:33.131 - INFO - ActivityStarted: _load_saved_as_object_from_file
+2021-02-23 15:26:33.228 - INFO - Loaded saved_as file. The saved_as object is: {'_CACHE_STORE_KEY_ONNX_CONVERTER_INIT_METADATA_': <_SavedAsProtocol.PICKLE: 1>}
+2021-02-23 15:26:33.229 - INFO - ActivityCompleted: Activity=_load_saved_as_object_from_file, HowEnded=Success, Duration=97.64[ms]
+2021-02-23 15:26:33.234 - INFO - ActivityCompleted: Activity=load, HowEnded=Success, Duration=112.49[ms]
+2021-02-23 15:26:33.666 - INFO - Setup artifacts successfully retrieved.
+2021-02-23 15:26:33.666 - INFO - Preparing input data for featurization iteration for run AutoML_706510b9-e904-4da3-80f4-3cd9ee175e4e_featurize_tr.
+2021-02-23 15:26:33.666 - INFO - Resolving dataflows using dprep json.
+2021-02-23 15:26:33.666 - INFO - DataPrep version: 2.9.1
+2021-02-23 15:26:33.666 - INFO - DataPrep log client session id: 27f7c01b-3401-47c7-b3eb-7ba57997997c
+2021-02-23 15:26:33.666 - INFO - ActivityStarted: ParsingDataprepJSON
+2021-02-23 15:26:33.667 - INFO - Deserializing dataflow.
+2021-02-23 15:26:40.384 - INFO - ActivityCompleted: Activity=ParsingDataprepJSON, HowEnded=Success, Duration=6717.47[ms]
+2021-02-23 15:26:40.386 - INFO - ActivityStarted: BuildingDataCharacteristics
+2021-02-23 15:26:40.386 - INFO - Starting data characteristics calculation. This might take a while...
+2021-02-23 15:33:24.616 - INFO - ActivityCompleted: Activity=BuildingDataCharacteristics, HowEnded=Success, Duration=404230.37[ms]
+2021-02-23 15:33:24.616 - INFO - Successfully retrieved data using <class 'str'>.
+2021-02-23 15:33:24.617 - INFO - Streaming is not conducive due to incompatible settings. Reason[s]: [ONNX compatibility is not supported]
+2021-02-23 15:33:24.625 - INFO - Preparing to fetch all feature profiles for the run.
+2021-02-23 15:33:24.625 - INFO - There are no feature profile requests to make for this run.
+2021-02-23 15:33:24.625 - INFO - Service responded with streaming disabled
