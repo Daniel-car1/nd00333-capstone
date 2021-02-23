@@ -1,6 +1,8 @@
 # Azure Machine Learning Engineer - Capstone Project to predict the Heart Disease Status applying MLOps
 
-Azure the cloud solution from microsoft offers the well-known advantages of the vertical scaling of computing power, the provision of web services and the use of existing cloud solutions to create the best products. <br/> That project uses these advantages for training the machine learning model with AutoML or hyperparameter tuning using Hyperdrive from a generated database to perform classification. Compute instances are created and made available in the cloud. The best trained model is deployed as a webservice whose endpoint API can be consumed via REST method to obtain the model's prediction. Key benefit of using the Python SDK, Jupyther Notebook leads to an elegant and reuseable way of automating the Machine learning task from cleaning data, training models, deploying the best model as a REST API and testing it's endpoint.
+Azure the cloud solution from microsoft offers the well-known advantages of the vertical scaling of computing power, the provision of web services and the use of existing cloud solutions to create the best products. <br/> That project uses these advantages for training the machine learning model with AutoML or hyperparameter tuning using Hyperdrive from a generated database to perform classification. Compute instances are created and made available in the cloud. The best trained model is deployed as a webservice whose endpoint API can be consumed via REST method to obtain the model's prediction. Key benefit of using the Python SDK, Jupyther Notebook leads to an elegant and reuseable way of automating the Machine learning task from cleaning data, training models, deploying the best model as a REST API and testing it's endpoint. <br/>
+A more detailed *Project Workflow* ant the *Project Implementation* focus the goal of the project next to the technical details. <br/> <br/>
+![Workflow](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Images/workflow.PNG)
 
 ## Dataset
 Despite the scientific advancement over the past decades, there are still numerous research areas in the field of heart disease. It is of particular interest to record easy-to-follow parameters and use them to infer a person's heart disease status.
@@ -34,6 +36,7 @@ Kaggle provided the Heart Disease dataset as a csv file, which is saved on githu
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
+
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
@@ -42,31 +45,42 @@ Kaggle provided the Heart Disease dataset as a csv file, which is saved on githu
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
+The first branch of the workflow project leads to receiving a trained model using AutoML. Settings and configurations used for this experiment are a `BanditPolicy` as an early termination policy, `RandomParameterSampling` of the tuneable hyperparameters of the classifier and the `HyperDriveConfig`.
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/sampling_policy_2hp.PNG) <br/>
 
-### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+`BanditPolicy` as an early termination policy is required to automatically terminate poorly performing runs which imporves computational efficiency. With it's attributes evaluation interval and slack factor Bandit Policy terminates runs in which the primary metric is not within the specified slack factor amound compared to the best performing run and therefore terminates bad runs early. <br/> <br/>
+`RandomParameterSampling` with '--C' the inverse of the regularization strength ranged from 0.1 to 1.0 - smaller values specify stronger regularization - and '--max_iter' the maximum amount of iterations taken for the solver to converge in a discrete numbers of 150, 200 and 250. Using Hyperdrive to find the best combinatin of 'C' and 'max_iter' and therefore the best set of hyperparameters for a maximal accuracy is the goal of hyperparameter tuning. Regarding the [LogisticRegression scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) model which is used for classificatino it turns out that 'C' and 'max_iter' are good good candidates for tuning, because the algorithm is build to fulfill that task. <br/> <br/>
+`HyperDriveConfig` describes and lists the settings and attributes like run configuration where the training script is listed, the choosen hyperparameter sampling, the choosen terminatin policy and the choosen metric. The deployed config will lead to the trained model with best tuned hyperparameters using Azure in combination with Hyperdrive. <br/> 
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+### Results of Hyperparameter Tuning using Hyperdrive
+After completing the traing task, the received model can be found in the experiment section and is listed as Run 1.
+![comp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/1.PNG) <br/>
+Child runs offer a moe detailed view of the hyperparameter tuning combinations.
+![cr](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/1.PNG) <br/>
+As it turned out with an accuracy of 0.918 (even better than the runs before) the hyperparameter combination of the Regularization Strength of 0.248 and 250 Max iterations lead to the best tuned model.
+![cr](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/3.PNG) <br/>
+Using the Python SDK, a detailed overview of the training details is given using the `RunDetails` widget.
+![widget](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/run_details.PNG) <br/>
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input. <br/>
-As it turned out, the VotingEnsemble resulted as the best AutoML model with an weighted Accuracy of XXXX, even better than the classification model after applying hpyterparameter tuning using Hyperdrive with an Accuracy of ......, which has to be deployed as a webservice. <br/> 
+As it turned out, the VotingEnsemble resulted as the best AutoML model with an weighted Accuracy of 0.927, even better than the classification model after applying hpyterparameter tuning using Hyperdrive with an Accuracy of 0.901, which has to be deployed as a webservice. <br/> 
 It's notrivial architecture is represented, using [NETRON](https://github.com/lutzroeder/netron) an open source tool for investigating and documenting Machine Learning Models in a pictorial way. <br/>
 Following the data flow, the 13 input features are scaled and casted in different ways resulting in an `FeatureVectorizer` which in turn results in the superposition of the 5  `TreeEnsembleClassifiers` and the `LinearClassifier` which each one is voted by a `Scaler`. Each `label_out` gets the associated `probabilities_out` of the VotingEnsemble as model output. Due to the Classification task of the deployed model, the output `label_out` is used as response.
 ![hyperdrive](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Images/best_AutoMLmodel.png) <br/>
 The VotingEnsemble is deployed as a Azure Container Instance (ACI) the resulting webservice is a HTTP endpoint with load balancing and a REST-API. Data can be send to the API as a POST request of a JSON object and receive the deployed models prediction as a response. Using the [swagger.json](https://github.com/Daniel-car1/nd00333-capstone/blob/main/swagger_nice_style.json), detailed information about the API schemes like the consumed and produced data, methods, responses or example input data can be taken into account, which follow the same style as the dataset. 
-![hyperdrive](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Images/swagger_nice_style.PNG) <br/>
+![hyperdrive](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Images/swagger_nice_style.PNG) <br/> <br/>
+![deploy](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/model_deployment.PNG) <br/>
 Deploying an registered model requires the following attributes:
 * `workspace`
 * `name` of the webservice/endpoint
 * `models` which should be deployed
 * `inference_config` using the entry_script and the environment of the model which should be deployed
 * `deployment_config`, describes the resources like cpu_cores and memory_gb, and attributes like auth_enabled or enable_app_insights <br/>
+![state](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/state.PNG) <br/>
+After successfully deploying the model with the healthy webservice state, the endpoint can be consumed sending a POST request to the Scoring URI with the JSON object in the body and Content-Type and Authorization int the headers. As a consequence a JSON response is received from the webservice. <br/>
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/response.PNG) <br/>
+The result of the choosen request ist [1] which indicates 'asymptomatic' of heart disease status and reflectes the expected result. <br/>
 
-#BILD <br/>
-After successfully deploying the model with the healthy webservice state, the endpoint can be consumed sending a POST request to the Scoring URI with the JSON object in the body and Content-Type and Authorization int the headers. As a consequence an response is received from the webservice. <br/>
-#BILD <br/>
-The result of the choosen request ist [1] which indicates an ........ of heart .... <br/>
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 - A working model
@@ -74,12 +88,11 @@ The result of the choosen request ist [1] which indicates an ........ of heart .
 - Demo of a sample request sent to the endpoint and its response
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted. <br/>
 The suggested Standout Suggestions *Convert the best model to ONNX format* and *Enable logging in the deployed web app* were executed in a detailed way. <br/>
-* *Converting the best model to ONNX format* requires preparatino in the `AutoMLConfig`, setting `enable_onnx_compatible_models = True`. Using `OnnxConverter` the best model is saved as an [ONNX model](https://github.com/Daniel-car1/nd00333-capstone/blob/main/best_model.onnx), which can be deployed in Azure, on Windows devices and even on iOS devices. <br/> #BILD
+* *Converting the best model to ONNX format* requires preparatino in the `AutoMLConfig`, setting `enable_onnx_compatible_models = True`. Using `OnnxConverter` the best model is saved as an [ONNX model](https://github.com/Daniel-car1/nd00333-capstone/blob/main/best_model.onnx), which can be deployed in Azure, on Windows devices and even on iOS devices. The received model is mentioned and documented in the Model Deployment section.
 * *Enable logging in the deployed web app* is implemented using the Python SDK code snippet in the Jupyter Notebook. Detailed information about the endpoint's characteristics are `Failed requests`=XXX, `Server response time`= XX ms and the number of `Server requests`= XX.
-<br/> #BILD
-<br/> #BILD
+![log0](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/logs_0.PNG) <br/> 
+![log](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/logs.PNG) <br/> 
 
 Nevertheless, expanding that project is even possible by
 * deploying the model of the Edge using Azure IoT Edge
