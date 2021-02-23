@@ -51,7 +51,7 @@ The first branch of the workflow project leads to receiving a trained model usin
 `HyperDriveConfig` describes and lists the settings and attributes like run configuration where the training script is listed, the choosen hyperparameter sampling, the choosen terminatin policy and the choosen metric. The deployed config will lead to the trained model with best tuned hyperparameters using Azure in combination with Hyperdrive. <br/> 
 
 ### Results of Hyperparameter Tuning using Hyperdrive
-After completing the traing task, the received model can be found in the experiment section and is listed as Run 1.
+After completing the traing task, the received model can be found in the experiment section and is listed as Run 1 with the corresponding Run ID.
 ![comp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/1.PNG) <br/>
 Child runs offer a moe detailed view of the hyperparameter tuning combinations.
 ![cr](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/2.PNG) <br/>
