@@ -79,11 +79,8 @@ After successfully deploying the model with the healthy webservice state, the en
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/response.PNG) <br/>
 The result of the choosen request ist [1] which indicates 'asymptomatic' of heart disease status and reflectes the expected result. <br/>
 
-## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
+## Screen Recording on Youtube
+[Azure Machine Learning Engineer - Capstone Project to predict Heart Disease Status applying MLOps](https://www.youtube.com/watch?v=2bqdOrTVWL8)
 
 ## Standout Suggestions
 The suggested Standout Suggestions *Convert the best model to ONNX format* and *Enable logging in the deployed web app* were executed in a detailed way. <br/>
