@@ -54,9 +54,9 @@ The first branch of the workflow project leads to receiving a trained model usin
 After completing the traing task, the received model can be found in the experiment section and is listed as Run 1.
 ![comp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/1.PNG) <br/>
 Child runs offer a moe detailed view of the hyperparameter tuning combinations.
-![cr](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/1.PNG) <br/>
+![cr](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/2.PNG) <br/>
 As it turned out with an accuracy of 0.918 (even better than the runs before) the hyperparameter combination of the Regularization Strength of 0.248 and 250 Max iterations lead to the best tuned model.
-![cr](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/3.PNG) <br/>
+![cr3](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/3.PNG) <br/>
 Using the Python SDK, a detailed overview of the training details is given using the `RunDetails` widget.
 ![widget](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Hyperdrive/run_details.PNG) <br/>
 
