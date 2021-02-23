@@ -34,13 +34,20 @@ The aim of this work is to train a machine learning classification algorithm usi
 Kaggle provided the Heart Disease dataset as a csv file, which is saved on github and uploaded as Raw data form the local file and registered to the Azure Workspace as a tabular dataset. It is also possible to work with data sets in machine learning algorithems.
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+At first the task, solving the machine learning problem of the heart disease dataset applying AutoML has to be described. Using AutoML, the key steps have to be described in the AutoMLConfig, which lists automl_setting - these are useful for finetuning the model - the calssification task or attributes like enabling of onnx compatible models.
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/automlsettings.PNG) <br/>
 
 
-### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+### Results of the AutoML run
+The key benefit of AutoML is the variaty of different classification algorithems, their outputs are compared against eachother to find the best fitting model. Here the best fitted model is the VotingEnsemble, a detailed view shows the n_estimators=25, n_jobs=0 and the metrix of weights for more information to look into the model.
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/parameters.PNG) <br/>
+More details are just shown in the `RunDetails` widget.
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/widget1.PNG) <br/>
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/widget2.PNG) <br/>
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/widget3.PNG) <br/>
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/widget4.PNG) <br/>
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+
 
 ## Hyperparameter Tuning
 The first branch of the workflow project leads to receiving a trained model using AutoML. Settings and configurations used for this experiment are a `BanditPolicy` as an early termination policy, `RandomParameterSampling` of the tuneable hyperparameters of the classifier and the `HyperDriveConfig`.
@@ -75,6 +82,8 @@ Deploying an registered model requires the following attributes:
 * `inference_config` using the entry_script and the environment of the model which should be deployed
 * `deployment_config`, describes the resources like cpu_cores and memory_gb, and attributes like auth_enabled or enable_app_insights <br/>
 ![state](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/state.PNG) <br/>
+For communication with the webservice the URI is at least required, the Swagger JSON gives detailed information about the schema to use.
+![state](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/Endpoint_url_application%20insight.PNG) <br/>
 After successfully deploying the model with the healthy webservice state, the endpoint can be consumed sending a POST request to the Scoring URI with the JSON object in the body and Content-Type and Authorization int the headers. As a consequence a JSON response is received from the webservice. <br/>
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/response.PNG) <br/>
 The result of the choosen request ist [1] which indicates 'asymptomatic' of heart disease status and reflectes the expected result. <br/>
@@ -85,7 +94,8 @@ The result of the choosen request ist [1] which indicates 'asymptomatic' of hear
 ## Standout Suggestions
 The suggested Standout Suggestions *Convert the best model to ONNX format* and *Enable logging in the deployed web app* were executed in a detailed way. <br/>
 * *Converting the best model to ONNX format* requires preparatino in the `AutoMLConfig`, setting `enable_onnx_compatible_models = True`. Using `OnnxConverter` the best model is saved as an [ONNX model](https://github.com/Daniel-car1/nd00333-capstone/blob/main/best_model.onnx), which can be deployed in Azure, on Windows devices and even on iOS devices. The received model is mentioned and documented in the Model Deployment section.
-* *Enable logging in the deployed web app* is implemented using the Python SDK code snippet in the Jupyter Notebook. Detailed information about the endpoint's characteristics are `Failed requests`=XXX, `Server response time`= XX ms and the number of `Server requests`= XX.
+* *Enable logging in the deployed web app* is implemented using the Python SDK code snippet in the Jupyter Notebook. Detailed information about the endpoint's characteristics are `Failed requests`= 0, `Server response time`= 0.78 ms and the number of `Server requests`= 9.
+![log0](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/application_insight.PNG) <br/> 
 ![log0](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/logs_0.PNG) <br/> 
 ![log](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/logs.PNG) <br/> 
 
