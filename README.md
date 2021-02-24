@@ -1,7 +1,7 @@
 # Azure Machine Learning Engineer - Capstone Project to predict the Heart Disease Status applying MLOps
 
 Azure the cloud solution from microsoft offers the well-known advantages of the vertical scaling of computing power, the provision of web services and the use of existing cloud solutions to create the best products. <br/> That project uses these advantages for training the machine learning model with AutoML or hyperparameter tuning using Hyperdrive from a generated database to perform classification. Compute instances are created and made available in the cloud. The best trained model is deployed as a webservice whose endpoint API can be consumed via REST method to obtain the model's prediction. Key benefit of using the Python SDK, Jupyther Notebook leads to an elegant and reuseable way of automating the Machine learning task from cleaning data, training models, deploying the best model as a REST API and testing it's endpoint. <br/>
-A more detailed *Project Workflow* ant the *Project Implementation* focus the goal of the project next to the technical details. <br/> <br/>
+A more detailed *Project Workflow* and the *Project Implementation* focus the goal of the project next to the technical details. <br/> <br/>
 ![Workflow](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Images/workflow.PNG)
 
 ## Dataset
