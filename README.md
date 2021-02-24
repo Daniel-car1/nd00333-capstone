@@ -64,8 +64,9 @@ More details are just shown in the `RunDetails` widget.
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/widget3.PNG) <br/>
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/widget4.PNG) <br/>
 
-One possible way which was not mentioned in the lectures to obtain the best AutoML model (`best_run`) during the 'generation' of the ONNX model. Here the ONNX model was saved for further sudies. From the best run the properties like the RunID (AutoML_b7a4272f-660c-4072-a222-af6fe4a1878d_41), the Type and the 'completed' status are listed. Additional information about the score/matrix are listed with a high level of accuracy of all kinds of different metrics, even the choosen 'AUC_weighted' with a value of 0.9245709187969441 is listed, which describes the primary metric of our AutoML classification task. 
-
+One possible way which was not mentioned in the lectures to obtain the best AutoML model (`best_run`) during the 'generation' of the ONNX model. Here the ONNX model was saved for further sudies. From the best run the properties like the RunID (AutoML_b7a4272f-660c-4072-a222-af6fe4a1878d_41), the Type and the 'completed' status are listed. Additional information about the score/matrix are listed with a high level of accuracy of all kinds of different metrics, even the choosen 'AUC_weighted' with a value of 0.9245709187969441 is listed, which describes the primary metric of our AutoML classification task. <br/> <br/>
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/bestrun1.PNG) <br/>
+![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/bestrun2.PNG) <br/>
 
 ## Hyperparameter Tuning
 The first branch of the workflow project leads to receiving a trained model using AutoML. Settings and configurations used for this experiment are a `BanditPolicy` as an early termination policy, `RandomParameterSampling` of the tuneable hyperparameters of the classifier and the `HyperDriveConfig`.
@@ -99,6 +100,8 @@ Deploying an registered model requires the following attributes:
 * `models` which should be deployed
 * `inference_config` using the entry_script and the environment of the model which should be deployed
 * `deployment_config`, describes the resources like cpu_cores and memory_gb, and attributes like auth_enabled or enable_app_insights <br/>
+
+<br/>
 ![state](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/state.PNG) <br/>
 For communication with the webservice the URI is at least required, the Swagger JSON gives detailed information about the schema to use.
 ![state](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/Endpoint_url_application%20insight.PNG) <br/>
