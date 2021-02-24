@@ -91,21 +91,24 @@ As it turned out, the VotingEnsemble resulted as the best AutoML model with an w
 It's notrivial architecture is represented, using [NETRON](https://github.com/lutzroeder/netron) an open source tool for investigating and documenting Machine Learning Models in a pictorial way. <br/>
 Following the data flow, the 13 input features are scaled and casted in different ways resulting in an `FeatureVectorizer` which in turn results in the superposition of the 5  `TreeEnsembleClassifiers` and the `LinearClassifier` which each one is voted by a `Scaler`. Each `label_out` gets the associated `probabilities_out` of the VotingEnsemble as model output. Due to the Classification task of the deployed model, the output `label_out` is used as response.
 ![hyperdrive](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Images/best_AutoMLmodel.png) <br/>
-The VotingEnsemble is deployed as a Azure Container Instance (ACI) the resulting webservice is a HTTP endpoint with load balancing and a REST-API. Data can be send to the API as a POST request of a JSON object and receive the deployed models prediction as a response. Using the [swagger.json](https://github.com/Daniel-car1/nd00333-capstone/blob/main/swagger_nice_style.json), detailed information about the API schemes like the consumed and produced data, methods, responses or example input data can be taken into account, which follow the same style as the dataset. 
+The VotingEnsemble is deployed as a Azure Container Instance (ACI) the resulting webservice is a HTTP endpoint with load balancing and a REST-API. Data can be send to the API as a POST request of a JSON object and receive the deployed models prediction as a response. Using the [swagger.json](https://github.com/Daniel-car1/nd00333-capstone/blob/main/swagger_nice_style.json), detailed information about the API schemes like the consumed and produced data, methods, responses or example input data can be taken into account, which follow the same style as the dataset.  <br/>
 ![hyperdrive](https://github.com/Daniel-car1/nd00333-capstone/blob/main/Images/swagger_nice_style.PNG) <br/> <br/>
 ![deploy](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/model_deployment.PNG) <br/>
 Deploying an registered model requires the following attributes:
+
 * `workspace`
 * `name` of the webservice/endpoint
 * `models` which should be deployed
 * `inference_config` using the entry_script and the environment of the model which should be deployed
-* `deployment_config`, describes the resources like cpu_cores and memory_gb, and attributes like auth_enabled or enable_app_insights <br/>
+* `deployment_config`, describes the resources like cpu_cores and memory_gb, and attributes like auth_enabled or enable_app_insights <br/> <br/>
 
-<br/>
 ![state](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/state.PNG) <br/>
+
 For communication with the webservice the URI is at least required, the Swagger JSON gives detailed information about the schema to use.
 ![state](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/Endpoint_url_application%20insight.PNG) <br/>
+
 After successfully deploying the model with the healthy webservice state, the endpoint can be consumed sending a POST request to the Scoring URI with the JSON object in the body and Content-Type and Authorization int the headers. As a consequence a JSON response is received from the webservice. <br/>
+
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/response.PNG) <br/>
 The result of the choosen request ist [1] which indicates 'asymptomatic' of heart disease status and reflectes the expected result. <br/>
 
