@@ -34,12 +34,12 @@ The aim of this work is to train a machine learning classification algorithm usi
 Kaggle provided the Heart Disease dataset as a csv file, which is saved on github and uploaded as Raw data form the local file and registered to the Azure Workspace as a tabular dataset. It is also possible to work with data sets in machine learning algorithems.
 
 ## Automated ML
-At first the task, solving the machine learning problem of the heart disease dataset applying AutoML has to be described. Using AutoML, the key steps of the configuration have to be described in the AutoMLConfig, which lists the automl_setting, too - these are useful for finetuning the model - the calssification task or attributes like enabling of onnx compatible models. <br/>
+At first the task, solving the machine learning problem of the heart disease dataset applying AutoML has to be described. Using AutoML, the key steps of the configuration have to be described in the [AutoMLConfig](https://docs.microsoft.com/en-us/python/api/azureml-train-automl-client/azureml.train.automl.automlconfig.automlconfig?view=azure-ml-py), which lists the automl_setting, too - these are useful for finetuning the model - the calssification task or attributes like enabling of onnx compatible models. <br/>
 * `automl_settings` lists
   - `experiment_timeout_minutes` the time in minutes after the experiment timeouts which is set to 20.
-  - `n_cross_validations` the number of cross validations which is performed on the training data.
-  - `may_concurrent_iterations` describes the maximal number of tasks solfed in parallel.
-  - `primary_metric` the choosen metric which measures the performance of the machine learning algorithem. <br/>
+  - `n_cross_validations` the number of cross validations which is performed on the training data, set to 3, known from best practice.
+  - `may_concurrent_iterations` describes the maximal number of tasks solfed in parallel, here 5.
+  - `primary_metric` the choosen metric - here AUC_weighted, an weighted accuracy metric - which measures the performance of the machine learning algorithem. <br/>
 
 * `AutoMLConfig` lists
   - `compute_target` used to describe the computing power, used for the experiment.
