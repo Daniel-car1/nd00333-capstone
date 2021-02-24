@@ -118,7 +118,8 @@ The result of the choosen request ist [1] which indicates 'asymptomatic' of hear
 ## Standout Suggestions
 The suggested Standout Suggestions *Convert the best model to ONNX format* and *Enable logging in the deployed web app* were executed in a detailed way. <br/>
 * *Converting the best model to ONNX format* requires preparatino in the `AutoMLConfig`, setting `enable_onnx_compatible_models = True`. Using `OnnxConverter` the best model is saved as an [ONNX model](https://github.com/Daniel-car1/nd00333-capstone/blob/main/best_model.onnx), which can be deployed in Azure, on Windows devices and even on iOS devices. The received model is mentioned and documented in the Model Deployment section.
-* *Enable logging in the deployed web app* is implemented using the Python SDK code snippet in the Jupyter Notebook. Detailed information about the endpoint's characteristics are `Failed requests`= 0, `Server response time`= 0.78 ms and the number of `Server requests`= 9.
+* *Enable logging in the deployed web app* is implemented using the Python SDK code snippet in the Jupyter Notebook. Detailed information about the endpoint's characteristics are `Failed requests`= 0, `Server response time`= 0.78 ms and the number of `Server requests`= 9. <br/> 
+
 ![log0](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/application_insight.PNG) <br/> 
 ![log0](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/logs_0.PNG) <br/> 
 ![log](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/logs.PNG) <br/> 
