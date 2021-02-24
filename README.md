@@ -34,7 +34,7 @@ The aim of this work is to train a machine learning classification algorithm usi
 Kaggle provided the Heart Disease dataset as a csv file, which is saved on github and uploaded as Raw data form the local file and registered to the Azure Workspace as a tabular dataset. It is also possible to work with data sets in machine learning algorithems.
 
 ## Automated ML
-At first the task, solving the machine learning problem of the heart disease dataset applying AutoML has to be described. Using AutoML, the key steps of the configuration have to be described in the [AutoMLConfig](https://docs.microsoft.com/en-us/python/api/azureml-train-automl-client/azureml.train.automl.automlconfig.automlconfig?view=azure-ml-py), which lists the automl_setting, too - these are useful for finetuning the model - the calssification task or attributes like enabling of onnx compatible models. <br/>
+At first the task, solving the machine learning problem of the heart disease dataset applying AutoML has to be described. Using AutoML, the key steps of the configuration have to be described in the [AutoMLConfig](https://docs.microsoft.com/en-us/python/api/azureml-train-automl-client/azureml.train.automl.automlconfig.automlconfig?view=azure-ml-py), which lists the automl_setting, too - these are useful for finetuning the model - the calssification task or attributes like enabling of onnx compatible models. In the AutoML run the following parameters are used. <br/>
 * `automl_settings` lists
   - `experiment_timeout_minutes` the time in minutes after the experiment timeouts which is set to 20.
   - `n_cross_validations` the number of cross validations which is performed on the training data, set to 3, known from best practice.
@@ -64,6 +64,7 @@ More details are just shown in the `RunDetails` widget.
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/widget3.PNG) <br/>
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/widget4.PNG) <br/>
 
+One possible way which was not mentioned in the lectures to obtain the best AutoML model (`best_run`) during the 'generation' of the ONNX model. Here the ONNX model was saved for further sudies. From the best run the properties like the RunID (AutoML_b7a4272f-660c-4072-a222-af6fe4a1878d_41), the Type and the 'completed' status are listed. Additional information about the score/matrix are listed with a high level of accuracy of all kinds of different metrics, even the choosen 'AUC_weighted' with a value of 0.9245709187969441 is listed, which describes the primary metric of our AutoML classification task. 
 
 
 ## Hyperparameter Tuning
