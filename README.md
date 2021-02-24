@@ -34,7 +34,24 @@ The aim of this work is to train a machine learning classification algorithm usi
 Kaggle provided the Heart Disease dataset as a csv file, which is saved on github and uploaded as Raw data form the local file and registered to the Azure Workspace as a tabular dataset. It is also possible to work with data sets in machine learning algorithems.
 
 ## Automated ML
-At first the task, solving the machine learning problem of the heart disease dataset applying AutoML has to be described. Using AutoML, the key steps have to be described in the AutoMLConfig, which lists automl_setting - these are useful for finetuning the model - the calssification task or attributes like enabling of onnx compatible models.
+At first the task, solving the machine learning problem of the heart disease dataset applying AutoML has to be described. Using AutoML, the key steps of the configuration have to be described in the AutoMLConfig, which lists the automl_setting, too - these are useful for finetuning the model - the calssification task or attributes like enabling of onnx compatible models. <br/>
+* `automl_settings` lists
+  - `experiment_timeout_minutes` the time in minutes after the experiment timeouts which is set to 20.
+  - `n_cross_validations` the number of cross validations which is performed on the training data.
+  - `may_concurrent_iterations` describes the maximal number of tasks solfed in parallel.
+  - `primary_metric` the choosen metric which measures the performance of the machine learning algorithem. <br/>
+
+* `AutoMLConfig` lists
+  - `compute_target` used to describe the computing power, used for the experiment.
+  - `task` which is set to "classification" due to the challenge. Other possible tasks are "regression" or "time series prediction".
+  - `training_data` and `label_colum_name` describes the used input data and the label which should be the learned output of the model.
+  - `path` to the project folder.
+  - `enable_onnx_compatibel_model` was set to true, to receive an ONNX model.
+  - `enable_early_stopping` set to true to enable early termination if the score is not imporoving in the short term.
+  - `featurization` set to off, to accelerate the run. Because that model was run twiche, with and without featurization with the goal, that the model performance, measured as the AUC_weighted did just differ up to 0.002 and did not effect the model performance.
+  - `debug_log` to obtain possible error logs listed.
+  - `**autml_settings` to call the above introduced setting parameters.
+
 ![resp](https://github.com/Daniel-car1/nd00333-capstone/blob/main/AutoML/automlsettings.PNG) <br/>
 
 
